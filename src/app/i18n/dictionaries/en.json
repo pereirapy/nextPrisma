@@ -1,0 +1,79 @@
+{
+	"common": {
+		"save": "Save",
+		"add": "Add",
+		"edit": "Edit",
+		"delete": "Delete",
+		"create": "Create",
+		"actions": "Actions",
+		"dataSaved": "The data was saved successfully!",
+		"dataDeleted": "The data was deleted successfully!",
+		"toast.success.title": "Successful!",
+		"modify": "Modify",
+		"action": "Action",
+		"cancel": "Cancel",
+		"searchName.placeholder": "Filter by name...",
+		"type": "Type",
+		"signIn": "Sign in",
+		"signOut": "Sign out",
+		"client": "Client",
+		"noOptions": "No options",
+		"total": "Total",
+		"back-to-home": "Back to home"
+	},
+	"buyPage": {
+		"title": "Hi from Buy's page!"
+	},
+	"rankingPage": {
+		"title": "Hi from World Ranking's page!"
+	},
+	"versionsPage": {
+		"title": "Hey, Do you like some version? Do you want to have it?",
+		"buyIt": "Buy"
+	},
+	"pointsPage": {
+		"title": "Here is your point's page"
+	},
+	"errors": {
+		"toast.error.title": "Nooo! Something happened",
+		"toast.error.description": "An error happened. Please, try again later.",
+		"noFormData": "Your form is empty",
+		"noId": "We cannot find your number identification",
+		"badOldPassword": "Your current password is not correct",
+		"emptyPassword": "The password is empty",
+		"dontMatchPassword": "The password is not the same",
+		"CredentialsSignin": "Credentials invalid."
+	},
+	"themes": {
+		"label": "Change theme",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"basicFields": {
+		"name.label": "Name",
+		"name.placeholder": "Write the name here",
+		"email.label": "E-mail",
+		"email.placeholder": "Write the e-mail here",
+		"password.label": "Password",
+		"password.placeholder": "Write the password here"
+	},
+	"login": {
+		"metaData.title": "Start session",
+		"metaData.description": "Enable you to start the session",
+
+		"page.title": "Access my account",
+		"page.subtitle": "Put down your email and password to access your account",
+
+		"input.connect": "Start thr session with your email"
+	},
+	"languages": {
+		"label": "Change language",
+		"portuguese": "Portuguese",
+		"english": "English"
+	},
+	"itemsMenu": {
+		"points": "Points",
+		"ranking": "Ranking"
+	}
+}

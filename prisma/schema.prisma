@@ -1,0 +1,202 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model taddr01 {
+  addressId       Int       @id @default(autoincrement()) @db.UnsignedInt
+  addrtype        String    @db.Char(1)
+  address         String    @unique(map: "idx_address") @db.VarChar(50)
+  addrstatus      Int       @default(10) @db.UnsignedInt
+  statusDate      DateTime? 
+  createDate      DateTime  @default(now()) @db.Timestamp(0)
+  creatorIp       String    @default("0.0.0.0") @db.VarChar(15)
+  creatorInstCode String    @default("0000-0000") @db.VarChar(14)
+  creatorSecCode  String    @default("0000-0000") @db.VarChar(14)
+  addruid         String?   @unique(map: "idx_addruid") @db.VarChar(73)
+  userid          Int?      @db.UnsignedInt
+  customerid      Int?      @db.UnsignedInt
+  lang            String    @db.VarChar(2)
+  creatorName     String?   @db.VarChar(50)
+}
+
+model taddrstatus {
+  addrstatus    Int    @id @db.UnsignedInt
+  statusDescInt String @db.VarChar(45)
+  statusDescExt String @db.VarChar(45)
+  statusType    Int    @default(0) @db.UnsignedInt
+  addrStatusMsg Int?   @db.UnsignedInt
+}
+
+model taddrtype {
+  addrtype     String @id @db.Char(1)
+  addrtypedesc String @db.VarChar(45)
+}
+
+model tcoach02 {
+  id                  Int             @id @default(autoincrement())
+  uuid                Bytes           @default(dbgenerated("0x30")) @db.Binary(16)
+  coachGuid           String?         @unique(map: "coachGuid_UNIQUE") @db.VarChar(36)
+  name                String?         @db.VarChar(50)
+  creationDate        DateTime        @default(now()) 
+  status              tcoach02_status @default(Active)
+  updateDate          DateTime?       
+  numFollowers        Int?            @default(0)
+  addressId           Int?            @db.UnsignedInt
+  password            String?         @db.VarChar(100)
+  recoverPwdCode      String?         @db.VarChar(6)
+  recoverCodeValidity DateTime?       
+
+  tcoachp05           tcoachp05?
+  tcoachrk06          tcoachrk06[]
+}
+
+model tcoachg04 {
+  coachId         Int
+  gameId          Int
+  gameGuid        String?  @db.VarChar(36)
+  fixed           Boolean? @default(true)
+  migratedCoachId Int?
+
+  @@id([gameId, coachId])
+  @@index([gameGuid], map: "idx_tcoachgames_gameGuid")
+}
+
+model tcoachgpt03 {
+  coachId     Int
+  coachgameId Int
+  timestamp   DateTime @default(now()) 
+  teamName    String?  @db.VarChar(100)
+  points      Int      @default(0)
+
+  @@id([coachId, coachgameId])
+}
+
+model tcoachp05 {
+  coachId   Int      @id
+  timestamp DateTime @default(now()) 
+  teamName  String?  @db.VarChar(100)
+  points    Int
+  tcoach02  tcoach02 @relation(fields: [coachId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "coadh_id")
+
+  @@index([points(sort: Desc), timestamp], map: "idx_coachpoints_timestamp")
+}
+
+model tcoachrk06 {
+  rankingPosition Int      @id @default(autoincrement())
+  coachGuid       String   @db.VarChar(36)
+  coachName       String   @db.VarChar(50)
+  teamName        String?  @db.VarChar(100)
+  points          Int
+  coachId         Int
+  tcoach02        tcoach02 @relation(fields: [coachId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_coach_id")
+
+  @@index([coachName], map: "coach_name_idx")
+  @@index([coachId], map: "fk_coach_id_idx")
+  @@index([coachGuid], map: "fk_coach_uuid_idx")
+}
+
+model tconfig {
+  configKey   String   @id @db.VarChar(20)
+  valueInt    Int?
+  valueStr    String?  @db.VarChar(45)
+  lastUpdated DateTime @default(now()) 
+}
+
+model tcountconv {
+  cod3 String  @id @db.VarChar(3)
+  cod2 String? @db.VarChar(2)
+}
+
+model tcountry {
+  country     String  @id @db.VarChar(2)
+  countryDesc String? @db.VarChar(30)
+  groupId     Int?    @default(0)
+
+  @@index([groupId], map: "groupId")
+}
+
+model tcountrydesc {
+  lang        String @db.VarChar(2)
+  country     String @db.VarChar(2)
+  countryDesc String @db.VarChar(30)
+
+  @@id([lang, country])
+  @@index([country], map: "idxCountry")
+  @@index([lang], map: "idxLang")
+}
+
+model tfiletype {
+  fileTypeId   Int    @id
+  fileTypeDesc String @db.VarChar(45)
+  folder       String @db.VarChar(45)
+}
+
+model tgver07 {
+  gameversion String  @db.Char(2)
+  subversion  String  @default("S") @db.Char(1)
+  versioncode String? @unique(map: "ix_versioncode") @db.VarChar(6)
+  versiondesc String  @db.VarChar(45)
+  hasranking  Boolean @default(true)
+  yearlauched Int     @db.UnsignedInt
+
+  @@id([gameversion, subversion])
+}
+
+model tlangequivalence {
+  baselang  String @id @default("") @db.VarChar(2)
+  equivlang String @default("") @db.VarChar(2)
+}
+
+model tlanguage {
+  language     String  @id @db.VarChar(2)
+  langDesc     String? @db.VarChar(50)
+  langEmission String? @db.VarChar(2)
+
+  @@index([langEmission], map: "TIdiomasTIdiomas")
+}
+
+model tregion {
+  country           String   @db.VarChar(2)
+  region            String   @db.VarChar(3)
+  regionCode        String?  @db.VarChar(3)
+  regionDesc        String?  @db.VarChar(255)
+  groupId           Int?     @default(0)
+  singleGeoIPRegion Boolean?
+
+  @@id([country, region])
+  @@index([country, regionCode], map: "Index_3")
+  @@index([groupId], map: "groupId")
+}
+
+model tsendtype {
+  sendType     String  @id @db.VarChar(3)
+  sendTypeDesc String? @db.VarChar(30)
+}
+
+model tz01 {
+  id           Int      @id @default(0)
+  date         DateTime @default(now())
+  userLocation String?  @db.VarChar(10)
+  program      String?  @db.VarChar(20)
+  lang         String?  @db.VarChar(2)
+  installCode  String?  @db.VarChar(20)
+  securityCode String?  @db.VarChar(20)
+  redirection  String?  @db.VarChar(100)
+  version      String?  @db.VarChar(20)
+  regname      String?  @db.VarChar(50)
+  ip           String?  @db.VarChar(20)
+  regLevel     Int?
+
+  @@index([userLocation], map: "Index_2")
+  @@index([ip], map: "Index_3")
+}
+
+enum tcoach02_status {
+  Active
+  Suspended
+}

@@ -1,0 +1,83 @@
+{
+	"common": {
+		"save": "Salvar",
+		"add": "Adicionar",
+		"edit": "Editar",
+		"delete": "Deletar",
+		"create": "Criar",
+		"actions": "Ações",
+		"dataSaved": "A informação foi salva com sucesso!",
+		"dataDeleted": "A informação foi elimanda com sucesso!",
+		"toast.success.title": "Sucesso!",
+		"modify": "Modificar",
+		"action": "Ação",
+		"cancel": "Cancelar",
+		"searchName.placeholder": "Filtrar por nome...",
+		"type": "Tipo",
+		"signIn": "Entrar",
+		"signOut": "Sair",
+		"client": "Cliente",
+		"noOptions": "Sem opções",
+		"total": "Total",
+		"back-to-home": "Voltar pra página de início"
+	},
+	"buyPage": {
+		"title": "Ola desde a página de compra!"
+	},
+	"rankingPage": {
+		"title": "Olá, esta é a página de Ranking Mundial!"
+	},
+	"versionsPage": {
+		"title": "Eai, Gostou de alguma versão? Deseja te-la?",
+		"buyIt": "Comprar"
+	},
+	"pointsPage": {
+		"title": "Esta é sua página de pontos"
+	},
+	"errors": {
+		"toast.error.title": "Algo deu errado!",
+		"toast.error.description": "Ocorreu um ero inesperado. Favor tentar novamente mais tarde.",
+		"no_enough_privileges": "Você não tem privilégio suficiente para esta ação",
+		"noFormData": "Infelizmente não foi possível reunir as informações do formulário",
+		"noTenantId": "Não foi possível localizar seu número de cliente.",
+		"noId": "Não é possível identificar a sua identidade.",
+		"badOldPassword": "Senha antiga errada.",
+		"emptyPassword": "Senha vazia.",
+		"dontMatchPassword": "A senha não corresponde.",
+		"CredentialsSignin": "Credenciais invalidas"
+	},
+	"themes": {
+		"label": "Mudar tema",
+		"light": "Claro",
+		"dark": "Escuro",
+		"system": "Sistema"
+	},
+	"basicFields": {
+		"name.label": "Nome",
+		"name.placeholder": "Escreva o nome aqui",
+		"email.label": "E-mail",
+		"email.placeholder": "Escreva o e-mail aqui",
+		"password.label": "Senha",
+		"password.placeholder": "Escreva a senha aqui"
+	},
+	"login": {
+		"metaData.title": "Iniciar sessão",
+		"metaData.description": "Habilita se iniciar sessão",
+
+		"page.title": "Acessar minha conta",
+		"page.subtitle": "Insira seu email e senha abaixo para acessar sua conta",
+
+		"input.connect": "Iniciar sessão com o email"
+	},
+	"languages": {
+    "label": "Mudar idioma",
+    "portuguese": "Português",
+    "english": "Inglês"
+  },
+	"itemsMenu": {
+		"points": "Points",
+		"ranking": "Ranking"
+	}
+
+
+}

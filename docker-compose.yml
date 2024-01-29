@@ -1,0 +1,37 @@
+version: "3"
+services:
+  elifoot_db:
+    image: "mysql:8.0"
+    container_name: "elifoot_db"
+    restart: "always"
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    env_file:
+      - .env
+    volumes:
+      - db_elifoot_data:/var/lib/mysql
+    ports:
+      - ${DB_PORT}:3306
+    networks: 
+      - network_elifoot
+
+  phpmyadmin:
+      image: phpmyadmin:latest
+      container_name: phpmyadmin
+      ports:
+          - '8081:80'
+      restart: always
+      environment:
+          - PMA_HOST=elifoot_db
+          - UPLOAD_LIMIT=300M
+      depends_on:
+          - elifoot_db      
+      networks: 
+        - network_elifoot
+networks: 
+  network_elifoot:
+    driver: bridge      
+
+volumes:
+  db_elifoot_data:
