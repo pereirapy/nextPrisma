@@ -1,12 +1,11 @@
 import { ParamsApp } from '../../../types/app';
 import { getDictionary } from '@/app/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
-import { ourFetch } from '@/utils/app';
-import { apiRoutes } from '@/lib/services/apiRoutes';
 import RankingList from './ranking-list';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { Metadata } from 'next';
+import { getRankings } from '@/lib/services/ranking';
 
 export async function generateMetadata({
 	params: { lng },
@@ -27,10 +26,7 @@ export default async function Ranking({
 	const session = await getServerSession(authOptions);
 	const currentUser = session?.user
 
-	const { result, data } = await ourFetch({
-		path: `${apiRoutes.ranking}`,
-	});
-	const error = !result.ok ? data : null;
+	const { rankings, error } = await getRankings();
 
 	return (
 		<HeaderWithFooter
@@ -40,7 +36,7 @@ export default async function Ranking({
 			<RankingList
 				currentLanguage={lng}
 				dictionary={dictionary}
-				data={data}
+				data={rankings}
 				error={error}
 				currentUser={currentUser}
 			/>

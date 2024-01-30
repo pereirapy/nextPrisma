@@ -20,11 +20,11 @@ type RankingListProps = {
 } & (
 	| {
 			data: RankingWithCoach[];
-			error?: string;
+			error?: unknown;
 	  }
 	| {
 			data?: RankingWithCoach[];
-			error: string;
+			error: unknown;
 	  }
 );
 export default function RankingList({
@@ -37,7 +37,7 @@ export default function RankingList({
 	return (
 		<div>
 			{error ? (
-				<div>{error}</div>
+				<div>{String(error)}</div>
 			) : (
 				<Table>
 					<TableCaption>{dictionary.rankingPage.tableCaption}</TableCaption>
@@ -45,8 +45,9 @@ export default function RankingList({
 						<TableRow>
 							<TableHead>{dictionary.rankingPage.position}</TableHead>
 							<TableHead className="w-[200px]">{dictionary.rankingPage.coach}</TableHead>
-							<TableHead>{dictionary.rankingPage.totalPoints}</TableHead>
+							<TableHead>{dictionary.rankingPage.rankingPosition}</TableHead>
 							<TableHead>{dictionary.rankingPage.teamName}</TableHead>
+							<TableHead>{dictionary.rankingPage.points}</TableHead>
 						</TableRow>
 					</TableHeader>
 					<TableBody>
@@ -71,6 +72,7 @@ export default function RankingList({
 									</TableCell>
 									<TableCell>{item.rankingPosition}</TableCell>
 									<TableCell>{item.teamName}</TableCell>
+									<TableCell>{item.points}</TableCell>
 								</TableRow>
 							))
 						)}

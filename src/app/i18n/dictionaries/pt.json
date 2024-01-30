@@ -26,40 +26,42 @@
 	},
 	"buyPage": {
 		"title": "Olá desde a sua página de compra!",
-		"tableCaption": "Você fez a decisão sábia!",
 		"metaData.title": "Comprar uma versão",
+		"metaData.description": "Escolha a sua versão favorita do jogo",
+		"tableCaption": "Você fez a decisão sábia!",
 		"versionCode": "Código da Versão",
 		"versionDesc": "Descrição da Versão",
-		"yearLaunched": "Ano de Lançamento",
+		"yearLaunched": "Ano de Lançamento"
 
-		"metaData.description": "Permite voce comprar uma versão específica do jogo"
 
 	},
 	"rankingPage": {
 		"title": "Olá, esta é a página de Ranking Mundial!",
 		"metaData.title": "Ranking Mundial",
+		"metaData.description": "Lista dos melhores jogadores do mundo",
 		
 		"tableCaption": "Ranking Mundial",
 		"position": "Posição",
+		"rankingPosition": "Posição no Ranking",
 		"coach": "Treinador",
 		"totalPoints": "Total de Pontos",
 		"teamName": "Nome do Time",
+		"points": "Pontuação"
 
 
-		"metaData.description": "Lista dos melhores jogadores do mundo"
 
 	},
 	"versionsPage": {
-		"hello": "Olá",
 		"title": "Gostou de alguma versão?",
+		"metaData.title": "Versões do Jogo",
+		"metaData.description": "Lista das versões do jogo",
+		"hello": "Olá",
 		"buyIt": "Comprar",
 		"tableCaption": "Lista de Versões",
 		"versionCode": "Código",
 		"versionDesc": "Descrição",
-		"yearLaunched": "Lançado",
+		"yearLaunched": "Lançado"
 
-		"metaData.title": "Versões do Jogo",
-		"metaData.description": "Lista das versões do jogo"
 
 
 	},

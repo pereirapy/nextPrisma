@@ -26,35 +26,37 @@
 	},
 	"buyPage": {
 		"title": "Hi from Buy's page!",
-		"metaData.title": "Buy Version",
+		"metaData.title": "Buy some Version",
+		"metaData.description": "Pick up right now your favorite version",
 		"tableCaption": "You did a wise decision!",
 		"versionCode": "Code",
 		"versionDesc": "Description",
-		"yearLaunched": "Launched",
-		"metaData.description": "Enable you to buy a specific version"
+		"yearLaunched": "Launched"
 
 	},
 	"rankingPage": {
 		"title": "Hi from World Ranking's page!",
 		"metaData.title": "World Ranking",
+		"metaData.description": "List of the best players in the world",
 		"tableCaption": "World Ranking",
 		"position": "Position",
+		"rankingPosition": "Ranking Position",
 		"coach": "Coach",
 		"totalPoints": "Total Points",
 		"teamName": "Team Name",
-		"metaData.description": "List of the best players in the world"
+		"points": "Points"
 
 	},
 	"versionsPage": {
-		"hello": "Olá",
 		"title": "Do you like some version?",
+		"metaData.title": "Versions Game",
+		"metaData.description": "Versions Game's List",
+		"hello": "Olá",
 		"buyIt": "Buy",
 		"tableCaption": "Version List",
 		"versionCode": "Code",
 		"versionDesc": "Description",
-		"yearLaunched": "Launched",
-		"metaData.title": "Versions Game",
-		"metaData.description": "Versions Game's List"
+		"yearLaunched": "Launched"
 
 	},
 	"pointsPage": {

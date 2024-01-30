@@ -1,8 +1,6 @@
 import { getDictionary } from '@/app/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import { Params } from '@/types/tgver07';
-import { ourFetch } from '@/utils/app';
-import { apiRoutes } from '@/lib/services/apiRoutes';
 import VersionToBuy from './version-to-buy';
 import { routes } from '@/config/routes';
 import { authOptions } from '@/lib/auth';
@@ -11,6 +9,7 @@ import { redirect } from 'next/navigation';
 import { ParamsApp } from '@/types/app';
 import { Metadata } from 'next';
 import { CALLBACK_URL } from '@/utils/constants';
+import { getVersion } from '@/lib/services/versions';
 
 export async function generateMetadata({
 	params: { lng },
@@ -33,10 +32,7 @@ export default async function BuyPage({ params: { lng, code } }: Params) {
   }
 
 	const dictionary = await getDictionary(lng);
-	const { result, data } = await ourFetch({
-		path: `${apiRoutes.versions}/${code}`,
-	});
-	const error = !result.ok ? data : null;
+	const { version, error } = await getVersion(code);
 
 	return (
 		<HeaderWithFooter
@@ -44,7 +40,7 @@ export default async function BuyPage({ params: { lng, code } }: Params) {
 			currentLanguage={lng}
 			title={dictionary.buyPage.title}
 			>
-			<VersionToBuy dictionary={dictionary} data={data} error={error}  />
+			<VersionToBuy dictionary={dictionary} data={version} error={error}  />
 		</HeaderWithFooter>
 	);
 }

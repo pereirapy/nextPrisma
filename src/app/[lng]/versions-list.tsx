@@ -32,15 +32,23 @@ export default function VersionList({
 				<div>{String(error)}</div>
 			) : (
 				<Table>
-					<TableCaption>{dictionary.versionsPage.tableCaption}</TableCaption>
+					<TableCaption>
+						{dictionary.versionsPage.tableCaption}
+					</TableCaption>
 					<TableHeader>
 						<TableRow>
 							<TableHead className="w-[100px]">
 								{dictionary.versionsPage.versionCode}
 							</TableHead>
-							<TableHead>{dictionary.versionsPage.versionDesc}</TableHead>
-							<TableHead>{dictionary.versionsPage.yearLaunched}</TableHead>
-							<TableHead>{dictionary.common.action}</TableHead>
+							<TableHead>
+								{dictionary.versionsPage.versionDesc}
+							</TableHead>
+							<TableHead>
+								{dictionary.versionsPage.yearLaunched}
+							</TableHead>
+							<TableHead className="text-center">
+								{dictionary.common.action}
+							</TableHead>
 						</TableRow>
 					</TableHeader>
 					<TableBody>
@@ -60,7 +68,7 @@ export default function VersionList({
 									</TableCell>
 									<TableCell>{item.versiondesc}</TableCell>
 									<TableCell>{item.yearlauched}</TableCell>
-									<TableCell>
+									<TableCell className="text-center">
 										<OurLink
 											className="font-bold"
 											href={`/${currentLanguage}${routes.buy}/${item.versioncode}`}>

@@ -1,5 +1,3 @@
-'use client';
-
 import {
 	Table,
 	TableBody,
@@ -9,7 +7,6 @@ import {
 	TableHeader,
 	TableRow,
 } from '@/components/ui/table';
-import { Locale } from '@/app/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { tgver07 } from '@prisma/client';
 import { H3 } from '@/components/ui/typographies';
@@ -18,10 +15,10 @@ type BuyPageProps = {
 	dictionary: Dictionary;
 } & (
 	| {
-			data: tgver07;
-			error?: null;
+			data: tgver07 | null;
+			error?: unknown;
 	  }
-	| { data?: null; error: string }
+	| { data?: tgver07 | null; error: unknown }
 );
 export default function VersionToBuy({
 	dictionary,
@@ -31,10 +28,12 @@ export default function VersionToBuy({
 	return (
 		<div className="mt-4">
 			{error && error != '' ? (
-				<div>{error}</div>
+				<div>{String(error)}</div>
 			) : (
 				<Table>
-					<TableCaption>{dictionary.buyPage.tableCaption}</TableCaption>
+					<TableCaption>
+						{dictionary.buyPage.tableCaption}
+					</TableCaption>
 					<TableHeader>
 						<TableRow>
 							<TableHead className="w-[100px]">
