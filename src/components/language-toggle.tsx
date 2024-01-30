@@ -34,9 +34,7 @@ export function LanguageToggle({
   const dropdownMenuItems: DropdownMenuItemsProps = {
     label: dictionary.languages.label,
     icon: (
-      <span className='p-3' style={{ width: '24px' }}>
         <Language color={theme === 'light' || systemTheme === 'dark' ? 'plain' : 'white'} />
-      </span>
     ),
     items: [
       {

@@ -29,7 +29,7 @@ export function DropdownMenuItems({
 			<DropdownMenuTrigger asChild>
 				<Button
 					variant="ghost"
-					className="w-5 px-0">
+					className="w-5 m-2">
 					{icon}
 					<span className="sr-only">{label}</span>
 				</Button>
@@ -39,6 +39,7 @@ export function DropdownMenuItems({
 					<DropdownMenuItem key={item.label}>
 						<Button
 							variant="ghost"
+							className="text-right"
 							onClick={() => item.onClick()}>
 							{item.label}
 						</Button>

@@ -50,7 +50,8 @@
 
 	},
 	"versionsPage": {
-		"title": "Eai, Gostou de alguma versão? Deseja te-la?",
+		"hello": "Olá",
+		"title": "Gostou de alguma versão?",
 		"buyIt": "Comprar",
 		"tableCaption": "Lista de Versões",
 		"versionCode": "Código",

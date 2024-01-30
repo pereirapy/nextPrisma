@@ -40,7 +40,7 @@ export function SiteHeader({
 									buttonVariants({
 										variant: 'ghost',
 									}),
-									'w-9 px-0'
+									'w-9 px-0 mr-2'
 								)}>
 								<GitHubLogoIcon className="h-4 w-4" />
 								<span className="sr-only">GitHub</span>
@@ -55,7 +55,7 @@ export function SiteHeader({
 									buttonVariants({
 										variant: 'ghost',
 									}),
-									'w-9 px-0'
+									'w-9 px-0 mr-2'
 								)}>
 								<TwitterLogoIcon className="h-4 w-4 fill-current" />
 								<span className="sr-only">Twitter</span>

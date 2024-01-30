@@ -46,7 +46,8 @@
 
 	},
 	"versionsPage": {
-		"title": "Hey, Do you like some version? Do you want to have it?",
+		"hello": "Olá",
+		"title": "Do you like some version?",
 		"buyIt": "Buy",
 		"tableCaption": "Version List",
 		"versionCode": "Code",
