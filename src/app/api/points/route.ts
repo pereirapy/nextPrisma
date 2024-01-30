@@ -8,8 +8,7 @@ import { authOptions } from '@/lib/auth';
 export async function GET() {
 	try {
 		const session = await getServerSession(authOptions);
-		console.log({session})
-		const { points, error } = await getPointsByCoach(session?.user.id);
+		const { points, error } = await getPointsByCoach(session?.user.coachId);
 		if (error) return messageError(error);
 		return NextResponse.json(points);
 	} catch (error) {

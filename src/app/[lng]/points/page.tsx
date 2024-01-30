@@ -28,8 +28,6 @@ export default async function Points({ params: { lng } }: ParamsApp) {
 		redirect(`/${lng}${routes.signIn}`);
 	}
 
-	console.log({session})
-
 	const dictionary = await getDictionary(lng);
 	const { points, error } = await getPointsByCoach(session.user.coachId);
 	return (

@@ -10,7 +10,6 @@ import { authOptions } from '@/lib/auth';
 export async function GET(req: Request) {
   try {
 		const session = await getServerSession(authOptions);
-		console.log({session})
 
       const { versions, error } = await getVersions();
       if (error) return messageError(error);
