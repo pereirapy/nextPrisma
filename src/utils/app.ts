@@ -20,7 +20,7 @@ export const getCurrentTheme = ({ currentTheme, systemTheme }: { currentTheme?: 
 };
 
 export function absoluteUrl(path: string) {
-  return `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}${path}`;
+  return `${process.env.NEXT_PUBLIC_APP_URL || window?.location?.origin || 'http://localhost:3000'}${path}`;
 }
 
 export function absoluteApiUrl(path: string) {

@@ -23,7 +23,6 @@ export function OurLink({
 	...rest
 }: OurLinkProps) {
 	const pathname = usePathname();
-console.log({pathname, href})
 	return (
 		<Link
 			{...rest}
