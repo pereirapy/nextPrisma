@@ -23,7 +23,7 @@ export function OurLink({
 	...rest
 }: OurLinkProps) {
 	const pathname = usePathname();
-
+console.log({pathname, href})
 	return (
 		<Link
 			{...rest}
@@ -31,7 +31,7 @@ export function OurLink({
 			onClick={() => onClick?.()}
 			className={cn(
 				`text-primary underline-offset-4 hover:underline h-9 px-4 py-2 transition-colors hover:text-foreground/80 ${className}`,
-				pathname?.startsWith(href || '')
+				pathname?.includes(href || '')
 					? 'text-foreground'
 					: 'text-foreground/60'
 			)}>

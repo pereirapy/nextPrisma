@@ -14,6 +14,7 @@
 		"cancel": "Cancel",
 		"searchName.placeholder": "Filter by name...",
 		"type": "Type",
+		"signUp": "Sign up",
 		"signIn": "Sign in",
 		"signOut": "Sign out",
 		"client": "Client",
@@ -27,16 +28,16 @@
 		"title": "Hi from Buy's page!",
 		"metaData.title": "Buy Version",
 		"tableCaption": "You did a wise decision!",
-		"versionCode": "versionCode",
-		"versionDesc": "Version Desc",
-		"yearLaunched": "Year launched",
+		"versionCode": "Code",
+		"versionDesc": "Description",
+		"yearLaunched": "Launched",
 		"metaData.description": "Enable you to buy a specific version"
 
 	},
 	"rankingPage": {
 		"title": "Hi from World Ranking's page!",
 		"metaData.title": "World Ranking",
-		"tableCaption": "Ranking Mundial",
+		"tableCaption": "World Ranking",
 		"position": "Position",
 		"coach": "Coach",
 		"totalPoints": "Total Points",
@@ -48,9 +49,9 @@
 		"title": "Hey, Do you like some version? Do you want to have it?",
 		"buyIt": "Buy",
 		"tableCaption": "Version List",
-		"versionCode": "Version Code",
-		"versionDesc": "Version Description",
-		"yearLaunched": "Year Launched",
+		"versionCode": "Code",
+		"versionDesc": "Description",
+		"yearLaunched": "Launched",
 		"metaData.title": "Versions Game",
 		"metaData.description": "Versions Game's List"
 
@@ -96,7 +97,9 @@
 		"page.title": "Access my account",
 		"page.subtitle": "Put down your email and password to access your account",
 
-		"input.connect": "Start the session with your email"
+		"input.connect": "Start the session with your email",
+		"haveAccount": "You already have a account?",
+		"noAccount": "You don't have a account?"
 	},
 	"languages": {
 		"label": "Change language",
@@ -108,14 +111,18 @@
 		"ranking": "Ranking"
 	},
 	"signUp": {
-		"metaData.title": "New user",
+		"metaData.title": "Sign Up",
 		"metaData.description": "Enable you to create a new user",
 
-		"page.title": "New user",
+		"page.title": "Sign Up",
 		"page.subtitle": "Here you can create a new user",
 		"confirmPassword.label": "Repeat password",
 		"confirmPassword.placeholder": "Repeat your password",
 		"buttonSignUp": "Create user"
 
+	},
+	"footer": {
+		"sourceCode": "The source code is available on",
+		"buildFor": "Build For"
 	}
 }

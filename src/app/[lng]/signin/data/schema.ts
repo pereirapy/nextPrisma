@@ -9,6 +9,6 @@ export type LoginFormValues = z.infer<typeof loginFormSchema>;
 export const defaultValues: Partial<LoginFormValues> = {
   // email: 'eTts@mgia.loc',
   // password: `95032E9E3307`,
-  email: 'nard_eotbmso@ohmtia.loc',
-  password: `95032E9E3307`,
+  email: 'pereirapy@hotmail.com',
+  password: `12345678`,
 };

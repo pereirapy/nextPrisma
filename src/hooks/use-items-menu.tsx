@@ -76,7 +76,6 @@ export function useItemsMenu({
 	currentLanguage,
 	dictionary,
 }: UseItemsMenuProps): UseItemsMenu {
-	const pathname = usePathname();
 
 	const signInLink = {
 		href: `/${currentLanguage}${routes.signIn}`,
@@ -104,7 +103,7 @@ export function useItemsMenu({
 	};
 
 	return {
-		loggedIn: [signOutButton, pointsLink, rankingLink],
+		loggedIn: [pointsLink, rankingLink, signOutButton],
 		notLoggedIn: [signInLink, rankingLink],
 	};
 }

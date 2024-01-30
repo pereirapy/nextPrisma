@@ -14,6 +14,7 @@
 		"cancel": "Cancelar",
 		"searchName.placeholder": "Filtrar por nome...",
 		"type": "Tipo",
+		"signUp": "Registrar-se",
 		"signIn": "Entrar",
 		"signOut": "Sair",
 		"client": "Cliente",
@@ -24,14 +25,14 @@
 		"date": "Data"
 	},
 	"buyPage": {
-		"title": "Ola desde a página de compra!",
-		"tableCaption": "You did a wise decision!",
+		"title": "Olá desde a sua página de compra!",
+		"tableCaption": "Você fez a decisão sábia!",
 		"metaData.title": "Comprar uma versão",
-		"versionCode": "versionCode",
-		"versionDesc": "Version Desc",
-		"yearLaunched": "Year launched",
+		"versionCode": "Código da Versão",
+		"versionDesc": "Descrição da Versão",
+		"yearLaunched": "Ano de Lançamento",
 
-		"metaData.description": "Permite voce comprar uma versão especifica do jogo"
+		"metaData.description": "Permite voce comprar uma versão específica do jogo"
 
 	},
 	"rankingPage": {
@@ -39,10 +40,10 @@
 		"metaData.title": "Ranking Mundial",
 		
 		"tableCaption": "Ranking Mundial",
-		"position": "Position",
-		"coach": "Coach",
-		"totalPoints": "Total Points",
-		"teamName": "Team Name",
+		"position": "Posição",
+		"coach": "Treinador",
+		"totalPoints": "Total de Pontos",
+		"teamName": "Nome do Time",
 
 
 		"metaData.description": "Lista dos melhores jogadores do mundo"
@@ -51,10 +52,10 @@
 	"versionsPage": {
 		"title": "Eai, Gostou de alguma versão? Deseja te-la?",
 		"buyIt": "Comprar",
-		"tableCaption": "Version List",
-		"versionCode": "Version Code",
-		"versionDesc": "Version Description",
-		"yearLaunched": "Year Launched",
+		"tableCaption": "Lista de Versões",
+		"versionCode": "Código",
+		"versionDesc": "Descrição",
+		"yearLaunched": "Lançado",
 
 		"metaData.title": "Versões do Jogo",
 		"metaData.description": "Lista das versões do jogo"
@@ -63,9 +64,9 @@
 	},
 	"pointsPage": {
 		"title": "Esta é sua página de pontos",
-		"tableCaption": "Point List",
-		"points": "Points",
-		"teamName" : "Team Name",
+		"tableCaption": "Lista de Pontos",
+		"points": "Pontuação",
+		"teamName" : "Nome do Time",
 
 
 		"metaData.title": "Seus Pontos",
@@ -105,7 +106,10 @@
 		"page.title": "Acessar minha conta",
 		"page.subtitle": "Insira seu email e senha abaixo para acessar sua conta",
 
-		"input.connect": "Iniciar sessão com o email"
+		"input.connect": "Iniciar sessão com o email",
+		"haveAccount": "Voce já tem uma conta?",
+		"noAccount": "Voce não tem uma conta?"
+
 	},
 	"languages": {
     "label": "Mudar idioma",
@@ -113,19 +117,24 @@
     "english": "Inglês"
   },
 	"itemsMenu": {
-		"points": "Points",
+		"points": "Pontuação",
 		"ranking": "Ranking"
 	},
 	"signUp": {
-		"metaData.title": "New user",
-		"metaData.description": "Enable you to create a new user",
+		"metaData.title": "Registrar-se",
+		"metaData.description": "Permite voce criar um novo usuário",
 
-		"page.title": "New user",
-		"page.subtitle": "Here you can create a new user",
+		"page.title": "Registrar-se",
+		"page.subtitle": "Permite voce criar um novo usuário",
 		"confirmPassword.label": "Confirmar a senha",
     "confirmPassword.placeholder": "Insira a sua nova senha",
 		"buttonSignUp": "Criar usuario"
+	},
+	"footer": {
+		"sourceCode": "O código fonte está disponível em",
+		"buildFor": "Feito para"
 	}
+
 
 
 

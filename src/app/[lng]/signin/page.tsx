@@ -7,6 +7,7 @@ import { getDictionary } from '@/app/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import { OurLink } from '@/components/ui/our-link';
 import { routes } from '@/config/routes';
+import { UserAuthContainer } from './components/user-auth-container';
 
 export async function generateMetadata({
 	params: { lng },
@@ -34,12 +35,15 @@ export default async function AuthenticationPage({
 						{dictionary.login['page.subtitle']}
 					</p>
 				</div>
-				<UserAuthForm
+				<UserAuthContainer
 					currentLanguage={lng}
 					dictionary={dictionary}
 				/>
-				<div>
-					<OurLink href={routes.signUp}>Sign up</OurLink>
+				<div className='text-center'>
+					{dictionary.login.noAccount}
+					<OurLink href={`/${lng}${routes.signUp}`}>
+						{dictionary.common.signUp}
+					</OurLink>
 				</div>
 			</div>
 		</HeaderWithFooter>

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { siteConfig } from '@/config/site';
-import { LaptopIcon } from '@radix-ui/react-icons';
 import { routes } from '@/config/routes';
 import { useSession } from 'next-auth/react';
 import {
@@ -9,6 +8,7 @@ import {
 } from '@/hooks/use-items-menu';
 import { Locale } from '@/app/i18n/settings';
 import { OurLink } from './ui/our-link';
+import { GiSoccerKick } from "react-icons/gi";
 
 type MainNavProps = {
 	itemsMenu: UseItemsMenu;
@@ -24,10 +24,9 @@ export function MainNav({
 	return (
 		<div className="mr-4 hidden md:flex">
 			<OurLink
-				title="Home"
 				href={`/${currentLanguage}${routes.home}`}
 				className="mr-6 flex items-center space-x-2">
-				<LaptopIcon className="h-6 w-6" />{' '}
+				<GiSoccerKick className="h-6 w-6" />{' '}
 				<span className="hidden font-bold sm:inline-block">
 					{siteConfig.name}
 				</span>

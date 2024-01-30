@@ -10,6 +10,7 @@ import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import { ParamsApp } from '@/types/app';
 import { Metadata } from 'next';
+import { CALLBACK_URL } from '@/utils/constants';
 
 export async function generateMetadata({
 	params: { lng },
@@ -28,7 +29,7 @@ export default async function BuyPage({ params: { lng, code } }: Params) {
 	const session = await getServerSession(authOptions);
 
   if (!session?.user) {
-    redirect(`/${lng}${routes.signIn}`);
+    redirect(`/${lng}${routes.signIn}?${CALLBACK_URL}=/${lng}${routes.buy}/${code}`);
   }
 
 	const dictionary = await getDictionary(lng);

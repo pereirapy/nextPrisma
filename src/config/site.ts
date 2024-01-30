@@ -6,7 +6,7 @@ export const siteConfig = {
     'Beautifully designed components built with Radix UI and Tailwind CSS.',
   links: {
     twitter: 'https://twitter.com/pereirapy',
-    github: 'https://github.com/pereirapy',
+    github: 'https://github.com/pereirapy/elifoot',
   },
 };
 

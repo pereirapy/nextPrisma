@@ -28,7 +28,8 @@ export default function HeaderWithFooter({
 				{title && <H1 className="mt-16 mb-16 text-center">{title}</H1>}
 				{children}
 			</div>
-			<SiteFooter />
+			<SiteFooter 				dictionary={dictionary}
+ />
 		</div>
 	);
 }

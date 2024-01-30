@@ -2,9 +2,11 @@ import { Metadata } from 'next';
 
 import { ParamsApp } from '@/types/app';
 
-import { CreateUserForm } from './components/create-user-form';
 import { getDictionary } from '@/app/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
+import { CreateUserContainer } from './components/create-user-container';
+import { OurLink } from '@/components/ui/our-link';
+import { routes } from '@/config/routes';
 
 export async function generateMetadata({
 	params: { lng },
@@ -32,10 +34,16 @@ export default async function SignUpPage({
 						{dictionary.signUp['page.subtitle']}
 					</p>
 				</div>
-				<CreateUserForm
+				<CreateUserContainer
 					currentLanguage={lng}
 					dictionary={dictionary}
 				/>
+				<div className='text-center'>
+					{dictionary.login.noAccount}
+					<OurLink href={`/${lng}${routes.signIn}`}>
+						{dictionary.common.signIn}
+					</OurLink>
+				</div>
 			</div>
 		</HeaderWithFooter>
 	);

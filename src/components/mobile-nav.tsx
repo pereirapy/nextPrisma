@@ -6,12 +6,12 @@ import { siteConfig } from '@/config/site';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
 import { Button } from './ui/button';
 import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
-import { ViewVerticalIcon, LaptopIcon } from '@radix-ui/react-icons';
+import { ViewVerticalIcon } from '@radix-ui/react-icons';
 import { MobileLink, UseItemsMenu } from '@/hooks/use-items-menu';
 import { Locale } from '@/app/i18n/settings';
 import { useSession } from 'next-auth/react';
 import { routes } from '@/config/routes';
-
+import { GiSoccerKick } from "react-icons/gi";
 
 type MobileNavProps = {
 	itemsMenu: UseItemsMenu;
@@ -43,7 +43,7 @@ export function MobileNav({
 				<MobileLink
 					href={`/${currentLanguage}${routes.home}`}
 					onOpenChange={() => setOpen(false)}>
-					<LaptopIcon className="mr-2 h-4 w-4" />
+					<GiSoccerKick className="mr-2 h-4 w-4" />
 					<span className="font-bold">{siteConfig.name}</span>
 				</MobileLink>
 				{data
