@@ -1,13 +1,21 @@
 export type Params = { params: { id: string } };
 
+export type SignIn = {
+  email: string;
+  password: string;
 
-export type User = {
+}
+
+
+export type CreateUser = SignIn & {
+  name: string;
+
+}
+
+export type User = CreateUser & {
   id: string;
   addressId: number;
   coachId: number;
-  name: string;
-  email: string;
-  password: string;
 };
 
 export type UserDataSession = Omit<User, 'password'>;

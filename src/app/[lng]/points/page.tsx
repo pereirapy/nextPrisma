@@ -7,6 +7,19 @@ import { authOptions } from '@/lib/auth';
 import { routes } from '@/config/routes';
 import { getPointsByCoach } from '@/lib/services/points';
 import PointList from './point-list';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+	params: { lng },
+}: ParamsApp): Promise<Metadata> {
+	const dictionary = await getDictionary(lng);
+
+	return {
+		title: dictionary.pointsPage['metaData.title'],
+		description: dictionary.pointsPage['metaData.description'],
+	};
+}
+
 
 export default async function Points({ params: { lng } }: ParamsApp) {
 	const session = await getServerSession(authOptions);

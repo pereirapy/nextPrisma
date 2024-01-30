@@ -10,6 +10,7 @@ import {
 import { Locale } from '@/app/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { tcoachgpt03 } from '@prisma/client';
+import { H2, H3 } from '@/components/ui/typographies';
 
 type PointListProps = {
 	dictionary: Dictionary;
@@ -35,18 +36,24 @@ export default function PointList({
 			{error ? (
 				<div>{String(error)}</div>
 			) : (
-				data && (
-					<Table>
-						<TableCaption>Point List</TableCaption>
-						<TableHeader>
+				<Table>
+					<TableCaption>{dictionary.pointsPage.tableCaption}</TableCaption>
+					<TableHeader>
+						<TableRow>
+							<TableHead>{dictionary.pointsPage.points}</TableHead>
+							<TableHead>{dictionary.pointsPage.teamName}</TableHead>
+							<TableHead>{dictionary.common.date}</TableHead>
+						</TableRow>
+					</TableHeader>
+					<TableBody>
+						{!data || data.length === 0 ? (
 							<TableRow>
-								<TableHead>Points</TableHead>
-								<TableHead >Team Name</TableHead>
-								<TableHead>Date</TableHead>
+								<TableCell colSpan={3} className='text-center'>
+									<H3>{dictionary.common.noData}</H3>
+								</TableCell>
 							</TableRow>
-						</TableHeader>
-						<TableBody>
-							{data.map((item) => (
+						) : (
+							data.map((item) => (
 								<TableRow key={String(item.timestamp)}>
 									<TableCell>{item.points}</TableCell>
 									<TableCell>{item.teamName}</TableCell>
@@ -54,10 +61,10 @@ export default function PointList({
 										{new Date(item.timestamp).toLocaleDateString()}
 									</TableCell>
 								</TableRow>
-							))}
-						</TableBody>
-					</Table>
-				)
+							))
+						)}
+					</TableBody>
+				</Table>
 			)}
 		</div>
 	);

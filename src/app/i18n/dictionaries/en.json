@@ -18,21 +18,52 @@
 		"signOut": "Sign out",
 		"client": "Client",
 		"noOptions": "No options",
+		"noData": "No data",
 		"total": "Total",
-		"back-to-home": "Back to home"
+		"back-to-home": "Back to home",
+		"date": "Date"
 	},
 	"buyPage": {
-		"title": "Hi from Buy's page!"
+		"title": "Hi from Buy's page!",
+		"metaData.title": "Buy Version",
+		"tableCaption": "You did a wise decision!",
+		"versionCode": "versionCode",
+		"versionDesc": "Version Desc",
+		"yearLaunched": "Year launched",
+		"metaData.description": "Enable you to buy a specific version"
+
 	},
 	"rankingPage": {
-		"title": "Hi from World Ranking's page!"
+		"title": "Hi from World Ranking's page!",
+		"metaData.title": "World Ranking",
+		"tableCaption": "Ranking Mundial",
+		"position": "Position",
+		"coach": "Coach",
+		"totalPoints": "Total Points",
+		"teamName": "Team Name",
+		"metaData.description": "List of the best players in the world"
+
 	},
 	"versionsPage": {
 		"title": "Hey, Do you like some version? Do you want to have it?",
-		"buyIt": "Buy"
+		"buyIt": "Buy",
+		"tableCaption": "Version List",
+		"versionCode": "Version Code",
+		"versionDesc": "Version Description",
+		"yearLaunched": "Year Launched",
+		"metaData.title": "Versions Game",
+		"metaData.description": "Versions Game's List"
+
 	},
 	"pointsPage": {
-		"title": "Here is your point's page"
+		"title": "Here is your point's page",
+		"tableCaption": "Point List",
+		"points": "Points",
+		"teamName" : "Team Name",
+
+		"metaData.title": "Your Points",
+		"metaData.description": "Points List"
+
 	},
 	"errors": {
 		"toast.error.title": "Nooo! Something happened",
@@ -65,7 +96,7 @@
 		"page.title": "Access my account",
 		"page.subtitle": "Put down your email and password to access your account",
 
-		"input.connect": "Start thr session with your email"
+		"input.connect": "Start the session with your email"
 	},
 	"languages": {
 		"label": "Change language",
@@ -75,5 +106,16 @@
 	"itemsMenu": {
 		"points": "Points",
 		"ranking": "Ranking"
+	},
+	"signUp": {
+		"metaData.title": "New user",
+		"metaData.description": "Enable you to create a new user",
+
+		"page.title": "New user",
+		"page.subtitle": "Here you can create a new user",
+		"confirmPassword.label": "Repeat password",
+		"confirmPassword.placeholder": "Repeat your password",
+		"buttonSignUp": "Create user"
+
 	}
 }

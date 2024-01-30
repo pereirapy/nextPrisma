@@ -12,10 +12,10 @@ import {
 import { Locale } from '@/app/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { tgver07 } from '@prisma/client';
+import { H3 } from '@/components/ui/typographies';
 
 type BuyPageProps = {
 	dictionary: Dictionary;
-	currentLanguage: Locale;
 } & (
 	| {
 			data: tgver07;
@@ -25,28 +25,35 @@ type BuyPageProps = {
 );
 export default function VersionToBuy({
 	dictionary,
-	currentLanguage,
 	data,
 	error,
 }: BuyPageProps) {
 	return (
-		<div className='mt-4'>
+		<div className="mt-4">
 			{error && error != '' ? (
 				<div>{error}</div>
 			) : (
-				data && (
-					<Table>
-						<TableCaption>You did a great choice!</TableCaption>
-						<TableHeader>
+				<Table>
+					<TableCaption>{dictionary.buyPage.tableCaption}</TableCaption>
+					<TableHeader>
+						<TableRow>
+							<TableHead className="w-[100px]">
+								{dictionary.buyPage.versionCode}
+							</TableHead>
+							<TableHead>{dictionary.buyPage.versionDesc}</TableHead>
+							<TableHead>{dictionary.buyPage.yearLaunched}</TableHead>
+						</TableRow>
+					</TableHeader>
+					<TableBody>
+						{!data ? (
 							<TableRow>
-								<TableHead className="w-[100px]">
-									Version Code
-								</TableHead>
-								<TableHead>Version Desc</TableHead>
-								<TableHead>Year lauched</TableHead>
+								<TableCell
+									colSpan={3}
+									className="text-center">
+									<H3>{dictionary.common.noData}</H3>
+								</TableCell>
 							</TableRow>
-						</TableHeader>
-						<TableBody>
+						) : (
 							<TableRow key={data.versioncode}>
 								<TableCell className="font-medium">
 									{data.versioncode}
@@ -54,9 +61,9 @@ export default function VersionToBuy({
 								<TableCell>{data.versiondesc}</TableCell>
 								<TableCell>{data.yearlauched}</TableCell>
 							</TableRow>
-						</TableBody>
-					</Table>
-				)
+						)}
+					</TableBody>
+				</Table>
 			)}
 		</div>
 	);

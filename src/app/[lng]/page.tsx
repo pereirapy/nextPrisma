@@ -4,21 +4,24 @@ import { apiRoutes } from '@/lib/services/apiRoutes';
 import { ourFetch } from '@/utils/app';
 import HeaderWithFooter from '@/components/header-with_footer';
 import VersionList from './versions-list';
-import { tgver07 } from '@prisma/client';
+import { Metadata } from 'next';
+import { getVersions } from '@/lib/services/versions';
 
-export type VersionsState = {
-	versions: tgver07[];
-	error: string;
-};
+export async function generateMetadata({
+	params: { lng },
+}: ParamsApp): Promise<Metadata> {
+	const dictionary = await getDictionary(lng);
+
+	return {
+		title: dictionary.versionsPage['metaData.title'],
+		description: dictionary.versionsPage['metaData.description'],
+	};
+}
 
 export default async function Home({ params: { lng } }: ParamsApp) {
 	const dictionary = await getDictionary(lng);
 
-	const { result, data } = await ourFetch({
-		path: apiRoutes.versions,
-	});
-	const error = !result.ok ? data : '';
-	const versionsData = { versions: data, error };
+	const { versions, error } = await getVersions();
 
 
 	return (
@@ -27,7 +30,8 @@ export default async function Home({ params: { lng } }: ParamsApp) {
 			title={dictionary.versionsPage.title}
 			currentLanguage={lng}>
 			<VersionList
-				data={versionsData}
+			error={error}
+				data={versions}
 				dictionary={dictionary}
 				currentLanguage={lng}
 			/>

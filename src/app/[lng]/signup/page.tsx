@@ -2,11 +2,9 @@ import { Metadata } from 'next';
 
 import { ParamsApp } from '@/types/app';
 
-import { UserAuthForm } from './components/user-auth-form';
+import { CreateUserForm } from './components/create-user-form';
 import { getDictionary } from '@/app/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
-import { OurLink } from '@/components/ui/our-link';
-import { routes } from '@/config/routes';
 
 export async function generateMetadata({
 	params: { lng },
@@ -14,33 +12,30 @@ export async function generateMetadata({
 	const dictionary = await getDictionary(lng);
 
 	return {
-		title: dictionary.login['metaData.title'],
-		description: dictionary.login['metaData.description'],
+		title: dictionary.signUp['metaData.title'],
+		description: dictionary.signUp['metaData.description'],
 	};
 }
 
-export default async function AuthenticationPage({
+export default async function SignUpPage({
 	params: { lng },
 }: ParamsApp) {
 	const dictionary = await getDictionary(lng);
 	return (
 		<HeaderWithFooter
 			dictionary={dictionary}
-			title={dictionary.login['page.title']}
+			title={dictionary.signUp['page.title']}
 			currentLanguage={lng}>
 			<div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
 				<div className="flex flex-col space-y-2 text-center">
 					<p className="text-sm text-muted-foreground">
-						{dictionary.login['page.subtitle']}
+						{dictionary.signUp['page.subtitle']}
 					</p>
 				</div>
-				<UserAuthForm
+				<CreateUserForm
 					currentLanguage={lng}
 					dictionary={dictionary}
 				/>
-				<div>
-					<OurLink href={routes.signUp}>Sign up</OurLink>
-				</div>
 			</div>
 		</HeaderWithFooter>
 	);

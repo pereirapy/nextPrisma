@@ -33,7 +33,7 @@ export const renderItemsMenu = (item: ItemMenu, key: number) =>
 	) : (
 		item.onClick && (
 			<OurLink
-				key={item.href}
+				key={item.href || key}
 				onClick={item.onClick}>
 				{item.label}
 			</OurLink>

@@ -4,4 +4,5 @@ export const apiRoutes = {
   versions: 'versions',
   ranking: 'ranking',
   points: 'points',
+  signUp: 'signup',
 };

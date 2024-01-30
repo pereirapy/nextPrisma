@@ -5,4 +5,5 @@ export const routes = {
   points: '/points',
   ranking: '/ranking',
   signIn: '/signin',
+  signUp: '/signup',
 };
