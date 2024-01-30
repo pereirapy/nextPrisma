@@ -23,7 +23,8 @@ export default async function Home({ params: { lng } }: ParamsApp) {
 	const session = await getServerSession(authOptions);
 
 	const { versions, error } = await getVersions();
-	const title = `${dictionary.versionsPage.hello}, ${session?.user.name}. ${dictionary.versionsPage.title}`
+	const name = session?.user?.name ? `, ${session.user.name}` : '';
+	const title = `${dictionary.versionsPage.hello}${name}. ${dictionary.versionsPage.title}`
 
 	return (
 		<HeaderWithFooter
