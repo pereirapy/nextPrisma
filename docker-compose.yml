@@ -13,25 +13,25 @@ services:
       - db_elifoot_data:/var/lib/mysql
     ports:
       - ${DB_PORT}:3306
-    networks: 
+    networks:
       - network_elifoot
 
   phpmyadmin:
-      image: phpmyadmin:latest
-      container_name: phpmyadmin
-      ports:
-          - '8081:80'
-      restart: always
-      environment:
-          - PMA_HOST=elifoot_db
-          - UPLOAD_LIMIT=300M
-      depends_on:
-          - elifoot_db      
-      networks: 
-        - network_elifoot
-networks: 
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    ports:
+      - "8081:80"
+    restart: always
+    environment:
+      - PMA_HOST=elifoot_db
+      - UPLOAD_LIMIT=300M
+    depends_on:
+      - elifoot_db
+    networks:
+      - network_elifoot
+networks:
   network_elifoot:
-    driver: bridge      
+    driver: bridge
 
 volumes:
   db_elifoot_data:

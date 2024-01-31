@@ -1,10 +1,10 @@
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { getServerSession, type NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import prisma from 'packages/database/prisma';
 
 import { routes } from '@/config/routes';
 import { signIn } from '@/lib/services/users';
-import prisma from 'packages/database/prisma';
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -34,7 +34,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user, account }) {
       if (account) {
-        token.accessToken = account.access_token
+        token.accessToken = account.access_token;
       }
       if (user) {
         return {
@@ -43,7 +43,7 @@ export const authOptions: NextAuthOptions = {
           email: user.email,
           id: user.id,
           addressId: user.addressId,
-          coachId: user.coachId
+          coachId: user.coachId,
         };
       }
       return token;
@@ -53,7 +53,7 @@ export const authOptions: NextAuthOptions = {
         ...session,
         user: {
           ...session.user,
-          ...token,          
+          ...token,
         },
       };
     },

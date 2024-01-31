@@ -1,6 +1,7 @@
-import { toast } from "@/components/ui/use-toast";
-import { Dictionary } from "@/types/app";
-import { IS_DEV } from "@/utils/constants";
+import { IS_DEV } from '@/utils/constants';
+
+import { Dictionary } from '@/types/app';
+import { toast } from '@/components/ui/use-toast';
 
 type ToastMessageErrorProps = {
   dictionary: Dictionary;
@@ -14,14 +15,14 @@ const getDescription = ({
   if (IS_DEV) {
     return !(errorMessage in dictionary.common)
       ? errorMessage
-      // @ts-ignore
-      : dictionary.common[errorMessage];
+      : // @ts-ignore
+        dictionary.common[errorMessage];
   }
   return errorMessage in dictionary.common
-        // @ts-ignore
-    ? dictionary.common[errorMessage]
-          // @ts-ignore
-    : dictionary.common['toast.error.description'];
+    ? // @ts-ignore
+      dictionary.common[errorMessage]
+    : // @ts-ignore
+      dictionary.common['toast.error.description'];
 };
 
 export const toastMessageError = ({
@@ -30,7 +31,7 @@ export const toastMessageError = ({
 }: ToastMessageErrorProps) => {
   toast({
     variant: 'destructive',
-          // @ts-ignore
+    // @ts-ignore
     title: dictionary.common['toast.error.title'],
     description: getDescription({ errorMessage, dictionary }),
   });

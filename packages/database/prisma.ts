@@ -1,14 +1,14 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 const prismaClientSingleton = () => {
   return new PrismaClient({
     log: [
-      { emit: "event", level: "query" },
-      { emit: "stdout", level: "info" },
-      { emit: "stdout", level: "warn" },
-      { emit: "stdout", level: "error" },
+      { emit: 'event', level: 'query' },
+      { emit: 'stdout', level: 'info' },
+      { emit: 'stdout', level: 'warn' },
+      { emit: 'stdout', level: 'error' },
     ],
-    errorFormat: "colorless",
+    errorFormat: 'colorless',
   });
 };
 
@@ -20,10 +20,10 @@ const globalForPrisma = globalThis as unknown as {
 
 export const prisma = globalForPrisma.prisma ?? prismaClientSingleton();
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = prisma;
 
-  prisma.$on("query", (e: any) => {
+  prisma.$on('query', (e: any) => {
     console.log(e);
   });
 }

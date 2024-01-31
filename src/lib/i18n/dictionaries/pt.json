@@ -1,144 +1,129 @@
 {
-	"common": {
-		"save": "Salvar",
-		"add": "Adicionar",
-		"edit": "Editar",
-		"delete": "Deletar",
-		"create": "Criar",
-		"actions": "Ações",
-		"dataSaved": "A informação foi salva com sucesso!",
-		"dataDeleted": "A informação foi elimanda com sucesso!",
-		"toast.success.title": "Sucesso!",
-		"modify": "Modificar",
-		"action": "Ação",
-		"cancel": "Cancelar",
-		"searchName.placeholder": "Filtrar por nome...",
-		"type": "Tipo",
-		"signUp": "Registrar-se",
-		"signIn": "Entrar",
-		"signOut": "Sair",
-		"client": "Cliente",
-		"noOptions": "Sem opções",
-		"noData": "Sem dados",
-		"total": "Total",
-		"back-to-home": "Voltar pra página de início",
-		"date": "Data"
-	},
-	"buyPage": {
-		"title": "Olá desde a sua página de compra!",
-		"metaData.title": "Comprar uma versão",
-		"metaData.description": "Escolha a sua versão favorita do jogo",
-		"tableCaption": "Você fez uma sábia decisão!",
-		"versionCode": "Código",
-		"versionDesc": "Descrição",
-		"yearLaunched": "Ano de Lançamento"
+  "common": {
+    "save": "Salvar",
+    "add": "Adicionar",
+    "edit": "Editar",
+    "delete": "Deletar",
+    "create": "Criar",
+    "actions": "Ações",
+    "dataSaved": "A informação foi salva com sucesso!",
+    "dataDeleted": "A informação foi elimanda com sucesso!",
+    "toast.success.title": "Sucesso!",
+    "modify": "Modificar",
+    "action": "Ação",
+    "cancel": "Cancelar",
+    "searchName.placeholder": "Filtrar por nome...",
+    "type": "Tipo",
+    "signUp": "Registrar-se",
+    "signIn": "Entrar",
+    "signOut": "Sair",
+    "client": "Cliente",
+    "noOptions": "Sem opções",
+    "noData": "Sem dados",
+    "total": "Total",
+    "back-to-home": "Voltar pra página de início",
+    "date": "Data"
+  },
+  "buyPage": {
+    "title": "Olá desde a sua página de compra!",
+    "metaData.title": "Comprar uma versão",
+    "metaData.description": "Escolha a sua versão favorita do jogo",
+    "tableCaption": "Você fez uma sábia decisão!",
+    "versionCode": "Código",
+    "versionDesc": "Descrição",
+    "yearLaunched": "Ano de Lançamento"
+  },
+  "rankingPage": {
+    "title": "Olá, esta é a página de Ranking Mundial!",
+    "metaData.title": "Ranking Mundial",
+    "metaData.description": "Lista dos melhores jogadores do mundo",
 
+    "tableCaption": "Ranking Mundial",
+    "position": "Posição",
+    "rankingPosition": "Posição no Ranking",
+    "coach": "Treinador",
+    "totalPoints": "Total de Pontos",
+    "teamName": "Nome do Time",
+    "points": "Pontuação"
+  },
+  "versionsPage": {
+    "title": "Gostou de alguma versão?",
+    "metaData.title": "Versões do Jogo",
+    "metaData.description": "Lista das versões do jogo",
+    "hello": "Olá",
+    "buyIt": "Comprar",
+    "tableCaption": "Lista de Versões",
+    "versionCode": "Código",
+    "versionDesc": "Descrição",
+    "yearLaunched": "Lançado"
+  },
+  "pointsPage": {
+    "title": "Esta é sua página de pontos",
+    "tableCaption": "Lista de Pontos",
+    "points": "Pontuação",
+    "teamName": "Nome do Time",
 
-	},
-	"rankingPage": {
-		"title": "Olá, esta é a página de Ranking Mundial!",
-		"metaData.title": "Ranking Mundial",
-		"metaData.description": "Lista dos melhores jogadores do mundo",
-		
-		"tableCaption": "Ranking Mundial",
-		"position": "Posição",
-		"rankingPosition": "Posição no Ranking",
-		"coach": "Treinador",
-		"totalPoints": "Total de Pontos",
-		"teamName": "Nome do Time",
-		"points": "Pontuação"
+    "metaData.title": "Seus Pontos",
+    "metaData.description": "Suas pontuações"
+  },
+  "errors": {
+    "toast.error.title": "Algo deu errado!",
+    "toast.error.description": "Ocorreu um ero inesperado. Favor tentar novamente mais tarde.",
+    "no_enough_privileges": "Você não tem privilégio suficiente para esta ação",
+    "noFormData": "Infelizmente não foi possível reunir as informações do formulário",
+    "noTenantId": "Não foi possível localizar seu número de cliente.",
+    "noId": "Não é possível identificar a sua identidade.",
+    "badOldPassword": "Senha antiga errada.",
+    "emptyPassword": "Senha vazia.",
+    "dontMatchPassword": "A senha não corresponde.",
+    "CredentialsSignin": "Credenciais invalidas"
+  },
+  "themes": {
+    "label": "Mudar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "basicFields": {
+    "name.label": "Nome",
+    "name.placeholder": "Escreva o nome aqui",
+    "email.label": "E-mail",
+    "email.placeholder": "Escreva o e-mail aqui",
+    "password.label": "Senha",
+    "password.placeholder": "Escreva a senha aqui"
+  },
+  "login": {
+    "metaData.title": "Iniciar sessão",
+    "metaData.description": "Habilita se iniciar sessão",
 
+    "page.title": "Acessar minha conta",
+    "page.subtitle": "Insira seu email e senha abaixo para acessar sua conta",
 
-
-	},
-	"versionsPage": {
-		"title": "Gostou de alguma versão?",
-		"metaData.title": "Versões do Jogo",
-		"metaData.description": "Lista das versões do jogo",
-		"hello": "Olá",
-		"buyIt": "Comprar",
-		"tableCaption": "Lista de Versões",
-		"versionCode": "Código",
-		"versionDesc": "Descrição",
-		"yearLaunched": "Lançado"
-
-
-
-	},
-	"pointsPage": {
-		"title": "Esta é sua página de pontos",
-		"tableCaption": "Lista de Pontos",
-		"points": "Pontuação",
-		"teamName" : "Nome do Time",
-
-
-		"metaData.title": "Seus Pontos",
-		"metaData.description": "Suas pontuações"
-
-	},
-	"errors": {
-		"toast.error.title": "Algo deu errado!",
-		"toast.error.description": "Ocorreu um ero inesperado. Favor tentar novamente mais tarde.",
-		"no_enough_privileges": "Você não tem privilégio suficiente para esta ação",
-		"noFormData": "Infelizmente não foi possível reunir as informações do formulário",
-		"noTenantId": "Não foi possível localizar seu número de cliente.",
-		"noId": "Não é possível identificar a sua identidade.",
-		"badOldPassword": "Senha antiga errada.",
-		"emptyPassword": "Senha vazia.",
-		"dontMatchPassword": "A senha não corresponde.",
-		"CredentialsSignin": "Credenciais invalidas"
-	},
-	"themes": {
-		"label": "Mudar tema",
-		"light": "Claro",
-		"dark": "Escuro",
-		"system": "Sistema"
-	},
-	"basicFields": {
-		"name.label": "Nome",
-		"name.placeholder": "Escreva o nome aqui",
-		"email.label": "E-mail",
-		"email.placeholder": "Escreva o e-mail aqui",
-		"password.label": "Senha",
-		"password.placeholder": "Escreva a senha aqui"
-	},
-	"login": {
-		"metaData.title": "Iniciar sessão",
-		"metaData.description": "Habilita se iniciar sessão",
-
-		"page.title": "Acessar minha conta",
-		"page.subtitle": "Insira seu email e senha abaixo para acessar sua conta",
-
-		"input.connect": "Iniciar sessão com o email",
-		"haveAccount": "Voce já tem uma conta?",
-		"noAccount": "Voce não tem uma conta?"
-
-	},
-	"languages": {
+    "input.connect": "Iniciar sessão com o email",
+    "haveAccount": "Voce já tem uma conta?",
+    "noAccount": "Voce não tem uma conta?"
+  },
+  "languages": {
     "label": "Mudar idioma",
     "portuguese": "Português",
     "english": "Inglês"
   },
-	"itemsMenu": {
-		"points": "Pontuação",
-		"ranking": "Ranking"
-	},
-	"signUp": {
-		"metaData.title": "Registrar-se",
-		"metaData.description": "Permite voce criar um novo usuário",
+  "itemsMenu": {
+    "points": "Pontuação",
+    "ranking": "Ranking"
+  },
+  "signUp": {
+    "metaData.title": "Registrar-se",
+    "metaData.description": "Permite voce criar um novo usuário",
 
-		"page.title": "Registrar-se",
-		"page.subtitle": "Permite voce criar um novo usuário",
-		"confirmPassword.label": "Confirmar a senha",
+    "page.title": "Registrar-se",
+    "page.subtitle": "Permite voce criar um novo usuário",
+    "confirmPassword.label": "Confirmar a senha",
     "confirmPassword.placeholder": "Insira a sua nova senha",
-		"buttonSignUp": "Criar usuario"
-	},
-	"footer": {
-		"sourceCode": "O código fonte está disponível em",
-		"registered": "Tem todos os direitos reservados desde 1987"
-	}
-
-
-
-
+    "buttonSignUp": "Criar usuario"
+  },
+  "footer": {
+    "sourceCode": "O código fonte está disponível em",
+    "registered": "Tem todos os direitos reservados desde 1987"
+  }
 }

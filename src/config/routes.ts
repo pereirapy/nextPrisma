@@ -1,4 +1,3 @@
-
 export const routes = {
   home: '/',
   buy: '/buy',

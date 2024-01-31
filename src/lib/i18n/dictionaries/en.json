@@ -1,131 +1,126 @@
 {
-	"common": {
-		"save": "Save",
-		"add": "Add",
-		"edit": "Edit",
-		"delete": "Delete",
-		"create": "Create",
-		"actions": "Actions",
-		"dataSaved": "The data was saved successfully!",
-		"dataDeleted": "The data was deleted successfully!",
-		"toast.success.title": "Successful!",
-		"modify": "Modify",
-		"action": "Action",
-		"cancel": "Cancel",
-		"searchName.placeholder": "Filter by name...",
-		"type": "Type",
-		"signUp": "Sign up",
-		"signIn": "Sign in",
-		"signOut": "Sign out",
-		"client": "Client",
-		"noOptions": "No options",
-		"noData": "No data",
-		"total": "Total",
-		"back-to-home": "Back to home",
-		"date": "Date"
-	},
-	"buyPage": {
-		"title": "Hi from Buy's page!",
-		"metaData.title": "Buy some Version",
-		"metaData.description": "Pick up right now your favorite version",
-		"tableCaption": "You did a wise decision!",
-		"versionCode": "Code",
-		"versionDesc": "Description",
-		"yearLaunched": "Launched"
+  "common": {
+    "save": "Save",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "actions": "Actions",
+    "dataSaved": "The data was saved successfully!",
+    "dataDeleted": "The data was deleted successfully!",
+    "toast.success.title": "Successful!",
+    "modify": "Modify",
+    "action": "Action",
+    "cancel": "Cancel",
+    "searchName.placeholder": "Filter by name...",
+    "type": "Type",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "client": "Client",
+    "noOptions": "No options",
+    "noData": "No data",
+    "total": "Total",
+    "back-to-home": "Back to home",
+    "date": "Date"
+  },
+  "buyPage": {
+    "title": "Hi from Buy's page!",
+    "metaData.title": "Buy some Version",
+    "metaData.description": "Pick up right now your favorite version",
+    "tableCaption": "You did a wise decision!",
+    "versionCode": "Code",
+    "versionDesc": "Description",
+    "yearLaunched": "Launched"
+  },
+  "rankingPage": {
+    "title": "Hi from World Ranking's page!",
+    "metaData.title": "World Ranking",
+    "metaData.description": "List of the best players in the world",
+    "tableCaption": "World Ranking",
+    "position": "Position",
+    "rankingPosition": "Ranking Position",
+    "coach": "Coach",
+    "totalPoints": "Total Points",
+    "teamName": "Team Name",
+    "points": "Points"
+  },
+  "versionsPage": {
+    "title": "Do you like some version?",
+    "metaData.title": "Versions Game",
+    "metaData.description": "Versions Game's List",
+    "hello": "Hello",
+    "buyIt": "Buy",
+    "tableCaption": "Version List",
+    "versionCode": "Code",
+    "versionDesc": "Description",
+    "yearLaunched": "Launched"
+  },
+  "pointsPage": {
+    "title": "Here is your point's page",
+    "tableCaption": "Point List",
+    "points": "Points",
+    "teamName": "Team Name",
 
-	},
-	"rankingPage": {
-		"title": "Hi from World Ranking's page!",
-		"metaData.title": "World Ranking",
-		"metaData.description": "List of the best players in the world",
-		"tableCaption": "World Ranking",
-		"position": "Position",
-		"rankingPosition": "Ranking Position",
-		"coach": "Coach",
-		"totalPoints": "Total Points",
-		"teamName": "Team Name",
-		"points": "Points"
+    "metaData.title": "Your Points",
+    "metaData.description": "Points List"
+  },
+  "errors": {
+    "toast.error.title": "Nooo! Something happened",
+    "toast.error.description": "An error happened. Please, try again later.",
+    "noFormData": "Your form is empty",
+    "noId": "We cannot find your number identification",
+    "badOldPassword": "Your current password is not correct",
+    "emptyPassword": "The password is empty",
+    "dontMatchPassword": "The password is not the same",
+    "CredentialsSignin": "Credentials invalid."
+  },
+  "themes": {
+    "label": "Change theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "basicFields": {
+    "name.label": "Name",
+    "name.placeholder": "Write the name here",
+    "email.label": "E-mail",
+    "email.placeholder": "Write the e-mail here",
+    "password.label": "Password",
+    "password.placeholder": "Write the password here"
+  },
+  "login": {
+    "metaData.title": "Start session",
+    "metaData.description": "Enable you to start the session",
 
-	},
-	"versionsPage": {
-		"title": "Do you like some version?",
-		"metaData.title": "Versions Game",
-		"metaData.description": "Versions Game's List",
-		"hello": "Olá",
-		"buyIt": "Buy",
-		"tableCaption": "Version List",
-		"versionCode": "Code",
-		"versionDesc": "Description",
-		"yearLaunched": "Launched"
+    "page.title": "Access my account",
+    "page.subtitle": "Put down your email and password to access your account",
 
-	},
-	"pointsPage": {
-		"title": "Here is your point's page",
-		"tableCaption": "Point List",
-		"points": "Points",
-		"teamName" : "Team Name",
+    "input.connect": "Start the session with your email",
+    "haveAccount": "You already have a account?",
+    "noAccount": "You don't have a account?"
+  },
+  "languages": {
+    "label": "Change language",
+    "portuguese": "Portuguese",
+    "english": "English"
+  },
+  "itemsMenu": {
+    "points": "Points",
+    "ranking": "Ranking"
+  },
+  "signUp": {
+    "metaData.title": "Sign Up",
+    "metaData.description": "Enable you to create a new user",
 
-		"metaData.title": "Your Points",
-		"metaData.description": "Points List"
-
-	},
-	"errors": {
-		"toast.error.title": "Nooo! Something happened",
-		"toast.error.description": "An error happened. Please, try again later.",
-		"noFormData": "Your form is empty",
-		"noId": "We cannot find your number identification",
-		"badOldPassword": "Your current password is not correct",
-		"emptyPassword": "The password is empty",
-		"dontMatchPassword": "The password is not the same",
-		"CredentialsSignin": "Credentials invalid."
-	},
-	"themes": {
-		"label": "Change theme",
-		"light": "Light",
-		"dark": "Dark",
-		"system": "System"
-	},
-	"basicFields": {
-		"name.label": "Name",
-		"name.placeholder": "Write the name here",
-		"email.label": "E-mail",
-		"email.placeholder": "Write the e-mail here",
-		"password.label": "Password",
-		"password.placeholder": "Write the password here"
-	},
-	"login": {
-		"metaData.title": "Start session",
-		"metaData.description": "Enable you to start the session",
-
-		"page.title": "Access my account",
-		"page.subtitle": "Put down your email and password to access your account",
-
-		"input.connect": "Start the session with your email",
-		"haveAccount": "You already have a account?",
-		"noAccount": "You don't have a account?"
-	},
-	"languages": {
-		"label": "Change language",
-		"portuguese": "Portuguese",
-		"english": "English"
-	},
-	"itemsMenu": {
-		"points": "Points",
-		"ranking": "Ranking"
-	},
-	"signUp": {
-		"metaData.title": "Sign Up",
-		"metaData.description": "Enable you to create a new user",
-
-		"page.title": "Sign Up",
-		"page.subtitle": "Here you can create a new user",
-		"confirmPassword.label": "Repeat password",
-		"confirmPassword.placeholder": "Repeat your password",
-		"buttonSignUp": "Create user"
-
-	},
-	"footer": {
-		"sourceCode": "The source code is available on",
-		"registered": "Have all rights registered since 1987"
-	}
+    "page.title": "Sign Up",
+    "page.subtitle": "Here you can create a new user",
+    "confirmPassword.label": "Repeat password",
+    "confirmPassword.placeholder": "Repeat your password",
+    "buttonSignUp": "Create user"
+  },
+  "footer": {
+    "sourceCode": "The source code is available on",
+    "registered": "Have all rights registered since 1987"
+  }
 }

@@ -1,9 +1,9 @@
-import { Locale } from "@/lib/i18n/settings";
-import en from "@/lib/i18n/dictionaries/en.json";
-import pt from "@/lib/i18n/dictionaries/pt.json";
+import en from '@/lib/i18n/dictionaries/en.json';
+import pt from '@/lib/i18n/dictionaries/pt.json';
+import { Locale } from '@/lib/i18n/settings';
 
 export type ParamsApp = {
-	params: { lng: Locale };
+  params: { lng: Locale };
 };
 
 export type OurFetchParams = {
@@ -11,7 +11,6 @@ export type OurFetchParams = {
   method?: 'GET' | 'POST' | 'PATCH' | 'DELETE';
   data?: any;
 };
-
 
 export type Dictionaries = {
   en: typeof en;

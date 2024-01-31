@@ -1,6 +1,7 @@
-import { Locale, i18n } from "@/lib/i18n/settings";
-import { LOCAL_STORAGE_APP_LANGUAGE } from "./constants";
-import { OurFetchParams } from "@/types/app";
+import { OurFetchParams } from '@/types/app';
+import { i18n, Locale } from '@/lib/i18n/settings';
+
+import { LOCAL_STORAGE_APP_LANGUAGE } from './constants';
 
 export const setPreferredLanguage = (lang: Locale) => {
   if (typeof window === 'undefined') return;
@@ -12,7 +13,13 @@ export const getPreferredLanguage = () => {
   return localStorage.getItem(LOCAL_STORAGE_APP_LANGUAGE) || i18n.defaultLocale;
 };
 
-export const getCurrentTheme = ({ currentTheme, systemTheme }: { currentTheme?: string, systemTheme?: string }) => {
+export const getCurrentTheme = ({
+  currentTheme,
+  systemTheme,
+}: {
+  currentTheme?: string;
+  systemTheme?: string;
+}) => {
   const defaultTheme = 'light';
   return currentTheme === 'system'
     ? systemTheme || defaultTheme
@@ -26,7 +33,6 @@ export function absoluteUrl(path: string) {
 export function absoluteApiUrl(path: string) {
   return absoluteUrl(`/api/${path}`);
 }
-
 
 export async function ourFetch({ path, data, method }: OurFetchParams) {
   const result = await fetch(absoluteApiUrl(path), {

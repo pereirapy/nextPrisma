@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Session } from 'next-auth';
 
-
 const getCurrentPath = (req: Request) => {
   if (!req) return { pageToVerify: '' };
   const headersList = req?.headers;
@@ -21,7 +20,6 @@ const getCurrentPath = (req: Request) => {
   return { pageToVerify };
 };
 
-
 type CheckUserCanAccessResult =
   | {
       res: false;
@@ -33,7 +31,6 @@ type CheckUserCanAccessResult =
       errorMessageKey?: undefined;
       session: Session;
     };
-
 
 export const messageError = (error?: string | unknown) =>
   NextResponse.json(String(error || 'no_enough_privileges'), { status: 500 });

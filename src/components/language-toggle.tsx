@@ -1,13 +1,17 @@
 'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
+import { getCurrentTheme, setPreferredLanguage } from '@/utils/app';
 import { Language } from 'grommet-icons';
 import { useTheme } from 'next-themes';
 
-import { DropdownMenuItems, DropdownMenuItemsProps } from './dropdown-menu-items';
 import { Dictionary } from '@/types/app';
 import { Locale } from '@/lib/i18n/settings';
-import { getCurrentTheme, setPreferredLanguage } from '@/utils/app';
+
+import {
+  DropdownMenuItems,
+  DropdownMenuItemsProps,
+} from './dropdown-menu-items';
 
 export function LanguageToggle({
   dictionary,
@@ -34,7 +38,9 @@ export function LanguageToggle({
   const dropdownMenuItems: DropdownMenuItemsProps = {
     label: dictionary.languages.label,
     icon: (
-        <Language color={theme === 'light' || systemTheme === 'dark' ? 'plain' : 'white'} />
+      <Language
+        color={theme === 'light' || systemTheme === 'dark' ? 'plain' : 'white'}
+      />
     ),
     items: [
       {
