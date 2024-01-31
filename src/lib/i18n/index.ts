@@ -1,5 +1,5 @@
+import { Dictionary } from "@/types/app";
 import type { Locale } from "./settings";
-import { Dictionary } from "../../types/app";
 
 const dictionaries = {
   en: () => import("./dictionaries/en.json").then((module) => module.default),

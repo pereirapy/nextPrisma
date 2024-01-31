@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import { i18n } from './app/i18n/settings';
+import { i18n } from './lib/i18n/settings';
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers

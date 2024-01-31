@@ -1,14 +1,9 @@
-import { getDictionary } from '@/app/i18n';
+import { getDictionary } from '@/lib/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import { Params } from '@/types/tgver07';
 import VersionToBuy from './version-to-buy';
-import { routes } from '@/config/routes';
-import { authOptions } from '@/lib/auth';
-import { getServerSession } from 'next-auth';
-import { redirect } from 'next/navigation';
 import { ParamsApp } from '@/types/app';
 import { Metadata } from 'next';
-import { CALLBACK_URL } from '@/utils/constants';
 import { getVersion } from '@/lib/services/versions';
 
 export async function generateMetadata({
@@ -22,14 +17,7 @@ export async function generateMetadata({
 	};
 }
 
-
 export default async function BuyPage({ params: { lng, code } }: Params) {
-
-	const session = await getServerSession(authOptions);
-
-  if (!session?.user) {
-    redirect(`/${lng}${routes.signIn}?${CALLBACK_URL}=/${lng}${routes.buy}/${code}`);
-  }
 
 	const dictionary = await getDictionary(lng);
 	const { version, error } = await getVersion(code);

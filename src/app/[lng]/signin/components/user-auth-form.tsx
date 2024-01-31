@@ -1,7 +1,4 @@
-'use client';
-
 import * as React from 'react';
-import { Locale } from '@/app/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { Form } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';

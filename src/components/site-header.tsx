@@ -12,7 +12,7 @@ import {
 	GitHubLogoIcon,
 	TwitterLogoIcon,
 } from '@radix-ui/react-icons';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { useItemsMenu } from '@/hooks/use-items-menu';
 import { LanguageToggle } from './language-toggle';
 

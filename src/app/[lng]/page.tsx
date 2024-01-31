@@ -1,11 +1,11 @@
-import { ParamsApp } from '../../types/app';
-import { getDictionary } from '../i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import VersionList from './versions-list';
 import { Metadata } from 'next';
 import { getVersions } from '@/lib/services/versions';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { getDictionary } from '@/lib/i18n';
+import { ParamsApp } from '@/types/app';
 
 export async function generateMetadata({
 	params: { lng },
@@ -24,7 +24,7 @@ export default async function Home({ params: { lng } }: ParamsApp) {
 
 	const { versions, error } = await getVersions();
 	const name = session?.user?.name ? `, ${session.user.name}` : '';
-	const title = `${dictionary.versionsPage.hello}${name}. ${dictionary.versionsPage.title}`
+	const title = `${dictionary.versionsPage.hello}${name}. ${dictionary.versionsPage.title}`;
 
 	return (
 		<HeaderWithFooter
@@ -32,7 +32,7 @@ export default async function Home({ params: { lng } }: ParamsApp) {
 			title={title}
 			currentLanguage={lng}>
 			<VersionList
-			error={error}
+				error={error}
 				data={versions}
 				dictionary={dictionary}
 				currentLanguage={lng}

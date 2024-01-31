@@ -1,11 +1,11 @@
-import { ParamsApp } from '../../../types/app';
-import { getDictionary } from '@/app/i18n';
+import { getDictionary } from '@/lib/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import RankingList from './ranking-list';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { Metadata } from 'next';
 import { getRankings } from '@/lib/services/ranking';
+import { ParamsApp } from '@/types/app';
 
 export async function generateMetadata({
 	params: { lng },

@@ -28,9 +28,9 @@
 		"title": "Olá desde a sua página de compra!",
 		"metaData.title": "Comprar uma versão",
 		"metaData.description": "Escolha a sua versão favorita do jogo",
-		"tableCaption": "Você fez a decisão sábia!",
-		"versionCode": "Código da Versão",
-		"versionDesc": "Descrição da Versão",
+		"tableCaption": "Você fez uma sábia decisão!",
+		"versionCode": "Código",
+		"versionDesc": "Descrição",
 		"yearLaunched": "Ano de Lançamento"
 
 
@@ -135,7 +135,7 @@
 	},
 	"footer": {
 		"sourceCode": "O código fonte está disponível em",
-		"buildFor": "Feito para"
+		"registered": "Tem todos os direitos reservados desde 1987"
 	}
 
 

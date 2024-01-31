@@ -8,7 +8,7 @@ import { Button } from './ui/button';
 import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
 import { ViewVerticalIcon } from '@radix-ui/react-icons';
 import { MobileLink, UseItemsMenu } from '@/hooks/use-items-menu';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { useSession } from 'next-auth/react';
 import { routes } from '@/config/routes';
 import { GiSoccerKick } from "react-icons/gi";

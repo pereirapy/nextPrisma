@@ -7,14 +7,12 @@ import {
 	TableHeader,
 	TableRow,
 } from '@/components/ui/table';
-import { Locale } from '@/app/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { tcoachgpt03 } from '@prisma/client';
-import { H2, H3 } from '@/components/ui/typographies';
+import { H3 } from '@/components/ui/typographies';
 
 type PointListProps = {
 	dictionary: Dictionary;
-	currentLanguage: Locale;
 } & (
 	| {
 			data: tcoachgpt03[];
@@ -27,7 +25,6 @@ type PointListProps = {
 );
 export default function PointList({
 	dictionary,
-	currentLanguage,
 	data,
 	error,
 }: PointListProps) {
@@ -58,7 +55,7 @@ export default function PointList({
 									<TableCell>{item.points}</TableCell>
 									<TableCell>{item.teamName}</TableCell>
 									<TableCell>
-										{new Date(item.timestamp).toLocaleDateString()}
+										{new Date(item.timestamp).toString()}
 									</TableCell>
 								</TableRow>
 							))

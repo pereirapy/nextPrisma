@@ -1,5 +1,4 @@
-import { ParamsApp } from '../../../types/app';
-import { getDictionary } from '@/app/i18n';
+import { getDictionary } from '@/lib/i18n';
 import HeaderWithFooter from '@/components/header-with_footer';
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth';
@@ -8,6 +7,8 @@ import { routes } from '@/config/routes';
 import { getPointsByCoach } from '@/lib/services/points';
 import PointList from './point-list';
 import { Metadata } from 'next';
+import { CALLBACK_URL } from '@/utils/constants';
+import { ParamsApp } from '@/types/app';
 
 export async function generateMetadata({
 	params: { lng },
@@ -24,10 +25,10 @@ export async function generateMetadata({
 export default async function Points({ params: { lng } }: ParamsApp) {
 	const session = await getServerSession(authOptions);
 
-	if (!session?.user) {
-		redirect(`/${lng}${routes.signIn}`);
-	}
-
+  if (!session?.user) {
+    redirect(`/${lng}${routes.signIn}?${CALLBACK_URL}=/${lng}${routes.points}`);
+  }
+console.log({session})
 	const dictionary = await getDictionary(lng);
 	const { points, error } = await getPointsByCoach(session.user.coachId);
 	return (
@@ -37,7 +38,6 @@ export default async function Points({ params: { lng } }: ParamsApp) {
 			currentLanguage={lng}>
 			<PointList
 				dictionary={dictionary}
-				currentLanguage={lng}
 				data={points}
 				error={error}
 			/>

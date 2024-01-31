@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { routes } from '@/config/routes';
 import { signOut } from 'next-auth/react';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { OurLink, OurLinkHrefClick } from '@/components/ui/our-link';
 import { LinkProps } from 'next/link';

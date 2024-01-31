@@ -1,6 +1,6 @@
-import { Locale } from "@/app/i18n/settings";
-import en from "../app/i18n/dictionaries/en.json";
-import pt from "../app/i18n/dictionaries/pt.json";
+import { Locale } from "@/lib/i18n/settings";
+import en from "@/lib/i18n/dictionaries/en.json";
+import pt from "@/lib/i18n/dictionaries/pt.json";
 
 export type ParamsApp = {
 	params: { lng: Locale };

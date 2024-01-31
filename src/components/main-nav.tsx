@@ -6,7 +6,7 @@ import {
 	UseItemsMenu,
 	renderItemsMenu,
 } from '@/hooks/use-items-menu';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { OurLink } from './ui/our-link';
 import { GiSoccerKick } from "react-icons/gi";
 

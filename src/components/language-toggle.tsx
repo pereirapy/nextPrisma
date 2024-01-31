@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 
 import { DropdownMenuItems, DropdownMenuItemsProps } from './dropdown-menu-items';
 import { Dictionary } from '@/types/app';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { getCurrentTheme, setPreferredLanguage } from '@/utils/app';
 
 export function LanguageToggle({

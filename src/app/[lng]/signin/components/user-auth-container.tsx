@@ -14,10 +14,11 @@ import {
 	defaultValues,
 	loginFormSchema,
 } from '../data/schema';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { UserAuthForm } from './user-auth-form';
 import { CALLBACK_URL } from '@/utils/constants';
+import { OurLink } from '@/components/ui/our-link';
 
 interface UserAuthContainerProps {
 	currentLanguage: Locale;
@@ -46,7 +47,8 @@ export function UserAuthContainer({
 				redirect: Boolean(false),
 				email,
 				password,
-				callbackUrl: redirectTo || `/${currentLanguage}${routes.home}`,
+				callbackUrl:
+					redirectTo || `/${currentLanguage}${routes.home}`,
 			});
 
 			if (resultSingIn?.error == 'CredentialsSignin') {
@@ -69,10 +71,23 @@ export function UserAuthContainer({
 	};
 
 	return (
-		<UserAuthForm
-			form={form}
-			onSubmit={onSubmit}
-			dictionary={dictionary}
-		/>
+		<div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+			<div className="flex flex-col space-y-2 text-center">
+				<p className="text-sm text-muted-foreground">
+					{dictionary.login['page.subtitle']}
+				</p>
+			</div>
+			<UserAuthForm
+				form={form}
+				onSubmit={onSubmit}
+				dictionary={dictionary}
+			/>
+			<div className="text-center">
+				{dictionary.login.noAccount}
+				<OurLink href={`/${currentLanguage}${routes.signUp}`}>
+					{dictionary.common.signUp}
+				</OurLink>
+			</div>
+		</div>
 	);
 }

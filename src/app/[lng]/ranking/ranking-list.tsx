@@ -7,7 +7,7 @@ import {
 	TableHeader,
 	TableRow,
 } from '@/components/ui/table';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { RankingWithCoach } from '@/types/tcoachp05';
 import { UserDataSession } from '@/types/user';

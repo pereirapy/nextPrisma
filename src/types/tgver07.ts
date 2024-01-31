@@ -1,4 +1,4 @@
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { ParamsApp } from './app';
 
 interface IParams extends ParamsApp {

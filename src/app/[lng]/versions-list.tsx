@@ -8,7 +8,7 @@ import {
 	TableRow,
 } from '@/components/ui/table';
 import { routes } from '@/config/routes';
-import { Locale } from '@/app/i18n/settings';
+import { Locale } from '@/lib/i18n/settings';
 import { OurLink } from '@/components/ui/our-link';
 import { Dictionary } from '@/types/app';
 import { tgver07 } from '@prisma/client';

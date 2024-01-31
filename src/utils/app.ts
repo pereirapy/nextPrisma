@@ -1,4 +1,4 @@
-import { Locale, i18n } from "@/app/i18n/settings";
+import { Locale, i18n } from "@/lib/i18n/settings";
 import { LOCAL_STORAGE_APP_LANGUAGE } from "./constants";
 import { OurFetchParams } from "@/types/app";
 
