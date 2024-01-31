@@ -7,7 +7,6 @@ import {
 	TableHeader,
 	TableRow,
 } from '@/components/ui/table';
-import { Locale } from '@/lib/i18n/settings';
 import { Dictionary } from '@/types/app';
 import { RankingWithCoach } from '@/types/tcoachp05';
 import { UserDataSession } from '@/types/user';
@@ -15,7 +14,6 @@ import { H3 } from '@/components/ui/typographies';
 
 type RankingListProps = {
 	dictionary: Dictionary;
-	currentLanguage: Locale;
 	currentUser?: UserDataSession;
 } & (
 	| {
@@ -29,7 +27,6 @@ type RankingListProps = {
 );
 export default function RankingList({
 	dictionary,
-	currentLanguage,
 	currentUser,
 	data,
 	error,

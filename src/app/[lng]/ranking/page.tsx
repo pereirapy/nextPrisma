@@ -34,7 +34,6 @@ export default async function Ranking({
 			title={dictionary.rankingPage.title}
 			currentLanguage={lng}>
 			<RankingList
-				currentLanguage={lng}
 				dictionary={dictionary}
 				data={rankings}
 				error={error}

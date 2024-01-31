@@ -28,7 +28,6 @@ export default async function Points({ params: { lng } }: ParamsApp) {
   if (!session?.user) {
     redirect(`/${lng}${routes.signIn}?${CALLBACK_URL}=/${lng}${routes.points}`);
   }
-console.log({session})
 	const dictionary = await getDictionary(lng);
 	const { points, error } = await getPointsByCoach(session.user.coachId);
 	return (
