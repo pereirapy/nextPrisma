@@ -22,7 +22,7 @@ export function MainNav({ itemsMenu, currentLanguage }: MainNavProps) {
       <OurLink
         href={`/${currentLanguage}${routes.home}`}
         className="mr-6 flex items-center space-x-2">
-        <GiSoccerKick className="h-6 w-6" />{' '}
+        <GiSoccerKick className="size-6" />{' '}
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>

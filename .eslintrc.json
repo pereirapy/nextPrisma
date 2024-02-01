@@ -3,16 +3,16 @@
   "root": true,
   "extends": [
     "next/core-web-vitals",
-    "airbnb",
+    "airbnb-typescript",
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["tailwindcss","prettier"],
+  "plugins": ["tailwindcss", "prettier"],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "tailwindcss/no-custom-classname": "off",
     "indent": "off",
-    "dot-notation":"off"
+    "dot-notation": "off"
   },
   "settings": {
     "tailwindcss": {
@@ -22,6 +22,9 @@
     "next": {
       "rootDir": ["./"]
     }
+  },
+  "parserOptions": {
+    "project": ["tsconfig.json"]
   },
   "overrides": [
     {

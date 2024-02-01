@@ -24,7 +24,7 @@ export function SiteHeader({
 }) {
   const itemsMenu = useItemsMenu({ currentLanguage, dictionary });
   return (
-    <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+    <header className="supports-backdrop-blur:bg-background/60 bg-background/95 sticky top-0 z-40 w-full border-b backdrop-blur">
       <div className="flex h-14 items-center">
         <MainNav
           itemsMenu={itemsMenu}
@@ -45,9 +45,9 @@ export function SiteHeader({
                   buttonVariants({
                     variant: 'ghost',
                   }),
-                  'w-9 px-0 mr-2',
+                  'mr-2 w-9 px-0',
                 )}>
-                <GitHubLogoIcon className="h-4 w-4" />
+                <GitHubLogoIcon className="size-4" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -60,9 +60,9 @@ export function SiteHeader({
                   buttonVariants({
                     variant: 'ghost',
                   }),
-                  'w-9 px-0 mr-2',
+                  'mr-2 w-9 px-0',
                 )}>
-                <TwitterLogoIcon className="h-4 w-4 fill-current" />
+                <TwitterLogoIcon className="size-4 fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>

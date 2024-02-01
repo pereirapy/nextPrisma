@@ -24,8 +24,8 @@ export default function HeaderWithFooter({
         dictionary={dictionary}
         currentLanguage={currentLanguage}
       />
-      <div className="mt-4 mb-4 min-h-[400px]">
-        {title && <H1 className="pt-16 pb-16 text-center">{title}</H1>}
+      <div className="my-4 min-h-[400px]">
+        {title && <H1 className="py-16 text-center">{title}</H1>}
         {children}
       </div>
       <SiteFooter dictionary={dictionary} />

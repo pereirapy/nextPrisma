@@ -16,7 +16,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const session = await hasSession();
+    await hasSession();
 
     const body = await req.json();
     const { version, error } = await createVersion(body);

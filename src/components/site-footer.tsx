@@ -6,8 +6,8 @@ type SiteFooterProps = {
 };
 export function SiteFooter({ dictionary }: SiteFooterProps) {
   return (
-    <footer className="h-14 flex bg-slate-400 text-center">
-      <span className="m-auto text-sm align-middle">
+    <footer className="flex h-14 bg-slate-400 text-center">
+      <span className="m-auto align-middle text-sm">
         <span className="font-bold italic">{siteConfig.name}</span>{' '}
         {dictionary.footer.registered}
       </span>

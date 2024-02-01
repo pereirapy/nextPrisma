@@ -39,6 +39,10 @@ const FormField = <
   );
 };
 
+const FormItemContext = React.createContext<FormItemContextValue>(
+  {} as FormItemContextValue,
+);
+
 const useFormField = () => {
   const fieldContext = React.useContext(FormFieldContext);
   const itemContext = React.useContext(FormItemContext);
@@ -65,10 +69,6 @@ const useFormField = () => {
 type FormItemContextValue = {
   id: string;
 };
-
-const FormItemContext = React.createContext<FormItemContextValue>(
-  {} as FormItemContextValue,
-);
 
 const FormItem = React.forwardRef<
   HTMLDivElement,
@@ -138,7 +138,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn('text-[0.8rem] text-muted-foreground', className)}
+      className={cn('text-muted-foreground text-[0.8rem]', className)}
       {...props}
     />
   );
@@ -160,7 +160,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn('text-[0.8rem] font-medium text-destructive', className)}
+      className={cn('text-destructive text-[0.8rem] font-medium', className)}
       {...props}>
       {body}
     </p>

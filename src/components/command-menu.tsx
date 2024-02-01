@@ -44,13 +44,13 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          'relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64',
+          'text-muted-foreground relative w-full justify-start text-sm sm:pr-12 md:w-40 lg:w-64',
         )}
         onClick={() => setOpen(true)}
         {...props}>
         <span className="hidden lg:inline-flex">Search documentation...</span>
         <span className="inline-flex lg:hidden">Search...</span>
-        <kbd className="pointer-events-none absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+        <kbd className="bg-muted pointer-events-none absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
@@ -64,15 +64,15 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>
-              <SunIcon className="mr-2 h-4 w-4" />
+              <SunIcon className="mr-2 size-4" />
               Light
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme('dark'))}>
-              <MoonIcon className="mr-2 h-4 w-4" />
+              <MoonIcon className="mr-2 size-4" />
               Dark
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme('system'))}>
-              <LaptopIcon className="mr-2 h-4 w-4" />
+              <LaptopIcon className="mr-2 size-4" />
               System
             </CommandItem>
           </CommandGroup>

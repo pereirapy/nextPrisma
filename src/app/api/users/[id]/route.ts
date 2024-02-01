@@ -5,7 +5,7 @@ import { hasSession } from '@/lib/auth';
 import { messageError } from '@/lib/auth/check-user-can-access';
 import { deleteUserById, getUser, updateUserById } from '@/lib/services/users';
 
-export async function GET(req: Request, { params }: Params) {
+export async function GET(_: Request, { params }: Params) {
   try {
     const id = params.id;
     const { user, error } = await getUser(id);
@@ -19,7 +19,7 @@ export async function GET(req: Request, { params }: Params) {
 
 export async function PATCH(req: Request, { params }: Params) {
   try {
-    const session = await hasSession();
+    await hasSession();
 
     const id = params.id;
     const body = await req.json();
@@ -35,7 +35,7 @@ export async function PATCH(req: Request, { params }: Params) {
 
 export async function DELETE(req: Request, { params }: Params) {
   try {
-    const session = await hasSession();
+    await hasSession();
 
     const id = params.id;
     const { user, error } = await deleteUserById(id);

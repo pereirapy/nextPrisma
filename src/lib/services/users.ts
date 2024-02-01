@@ -31,16 +31,14 @@ export const signIn = async (user: SignIn | undefined) => {
       // Compare hash of passwords.
       if (password !== firstUser.password) return { error: 'bad_password' };
 
-      const user = {
-        id: firstUser.id,
-        addressId: firstUser.addressId,
-        coachId: firstUser.addressId,
-        name: firstUser.name,
-        email: existingUserEmail.address,
-      };
-
       return {
-        user,
+        user: {
+          id: firstUser.id,
+          addressId: firstUser.addressId,
+          coachId: firstUser.addressId,
+          name: firstUser.name,
+          email: existingUserEmail.address,
+        },
       };
     } else return { error: 'user_not_found!' };
   } catch (error) {

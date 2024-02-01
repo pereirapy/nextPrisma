@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import { UseFormReturn } from 'react-hook-form';
 
 import { Dictionary } from '@/types/app';
@@ -22,8 +21,6 @@ export function CreateUserForm({
   form,
   onSubmit,
 }: CreateUserFormProps) {
-  const router = useRouter();
-
   return (
     <div className={cn('grid gap-6')}>
       <Form {...form}>

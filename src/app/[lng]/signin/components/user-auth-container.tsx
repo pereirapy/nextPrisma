@@ -72,7 +72,7 @@ export function UserAuthContainer({
   return (
     <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
       <div className="flex flex-col space-y-2 text-center">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           {dictionary.login['page.subtitle']}
         </p>
       </div>

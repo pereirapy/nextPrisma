@@ -30,7 +30,7 @@ export function OurLink({
       href={href || ''}
       onClick={() => onClick?.()}
       className={cn(
-        `text-primary underline-offset-4 hover:underline h-9 px-4 py-2 transition-colors hover:text-foreground/80 ${className}`,
+        `text-primary hover:text-foreground/80 h-9 px-4 py-2 underline-offset-4 transition-colors hover:underline ${className}`,
         pathname?.includes(href || '')
           ? 'text-foreground'
           : 'text-foreground/60',

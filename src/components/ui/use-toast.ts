@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // Inspired by react-hot-toast library
 import * as React from 'react';
 
@@ -19,13 +21,6 @@ const actionTypes = {
   DISMISS_TOAST: 'DISMISS_TOAST',
   REMOVE_TOAST: 'REMOVE_TOAST',
 } as const;
-
-let count = 0;
-
-function genId() {
-  count = (count + 1) % Number.MAX_SAFE_INTEGER;
-  return count.toString();
-}
 
 type ActionType = typeof actionTypes;
 
@@ -51,6 +46,12 @@ interface State {
   toasts: ToasterToast[];
 }
 
+let count = 0;
+const listeners: Array<(state: State) => void> = [];
+
+let memoryState: State = { toasts: [] };
+
+type Toast = Omit<ToasterToast, 'id'>;
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
 const addToRemoveQueue = (toastId: string) => {
@@ -124,10 +125,6 @@ export const reducer = (state: State, action: Action): State => {
   }
 };
 
-const listeners: Array<(state: State) => void> = [];
-
-let memoryState: State = { toasts: [] };
-
 function dispatch(action: Action) {
   memoryState = reducer(memoryState, action);
   listeners.forEach((listener) => {
@@ -135,7 +132,10 @@ function dispatch(action: Action) {
   });
 }
 
-type Toast = Omit<ToasterToast, 'id'>;
+function genId() {
+  count = (count + 1) % Number.MAX_SAFE_INTEGER;
+  return count.toString();
+}
 
 function toast({ ...props }: Toast) {
   const id = genId();

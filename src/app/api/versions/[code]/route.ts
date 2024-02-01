@@ -23,7 +23,7 @@ export async function GET(req: Request, { params }: Params) {
 
 export async function PATCH(req: Request, { params }: Params) {
   try {
-    const session = await hasSession();
+    await hasSession();
 
     const code = params.code;
     const body = await req.json();

@@ -29,7 +29,7 @@ export function DropdownMenuItems({
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="w-5 m-2">
+          className="m-2 w-5">
           {icon}
           <span className="sr-only">{label}</span>
         </Button>
