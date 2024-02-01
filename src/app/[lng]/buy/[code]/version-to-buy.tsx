@@ -28,7 +28,7 @@ export default function VersionToBuy({
 }: BuyPageProps) {
   return (
     <div className="mt-4">
-      {error && error != '' ? (
+      {error ? (
         <div>{String(error)}</div>
       ) : (
         <Table>

@@ -17,11 +17,11 @@ type PointListProps = {
 } & (
   | {
       data: tcoachgpt03[];
-      error?: string;
+      error?: string | unknown;
     }
   | {
       data?: tcoachgpt03[];
-      error: string;
+      error: string | unknown;
     }
 );
 export default function PointList({ dictionary, data, error }: PointListProps) {

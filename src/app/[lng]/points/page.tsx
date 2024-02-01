@@ -43,7 +43,7 @@ export default async function Points({ params: { lng } }: ParamsApp) {
       <PointList
         dictionary={dictionary}
         data={points}
-        error={String(error)}
+        error={error}
       />
     </HeaderWithFooter>
   );
