@@ -32,7 +32,7 @@ export function parseMetadata({
       siteName: siteConfig.name,
       images: [
         {
-          url: `${url}/og.png`, // Must be an absolute URL
+          url: `${url}/images/og.png`, // Must be an absolute URL
           width: 512,
           height: 512,
         },
