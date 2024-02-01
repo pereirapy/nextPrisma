@@ -15,8 +15,8 @@ export async function generateMetadata({
   const dictionary = await getDictionary(lng);
 
   return parseMetadata({
-    title: dictionary.pointsPage['metaData.title'],
-    description: dictionary.pointsPage['metaData.description'],
+    title: dictionary.buyPage['metaData.title'],
+    description: dictionary.buyPage['metaData.description'],
     lng,
   });
 }
