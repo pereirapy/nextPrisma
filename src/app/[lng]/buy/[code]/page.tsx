@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { ParamsApp } from '@/types/app';
 import { Params } from '@/types/tgver07';
 import { getDictionary } from '@/lib/i18n';
+import { parseMetadata } from '@/lib/i18n/settings';
 import { getVersion } from '@/lib/services/versions';
 import HeaderWithFooter from '@/components/header-with_footer';
 
@@ -13,10 +14,11 @@ export async function generateMetadata({
 }: ParamsApp): Promise<Metadata> {
   const dictionary = await getDictionary(lng);
 
-  return {
-    title: dictionary.buyPage['metaData.title'],
-    description: dictionary.buyPage['metaData.description'],
-  };
+  return parseMetadata({
+    title: dictionary.pointsPage['metaData.title'],
+    description: dictionary.pointsPage['metaData.description'],
+    lng,
+  });
 }
 
 export default async function BuyPage({ params: { lng, code } }: Params) {

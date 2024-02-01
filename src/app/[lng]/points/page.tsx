@@ -7,6 +7,7 @@ import { ParamsApp } from '@/types/app';
 import { routes } from '@/config/routes';
 import { authOptions } from '@/lib/auth';
 import { getDictionary } from '@/lib/i18n';
+import { parseMetadata } from '@/lib/i18n/settings';
 import { getPointsByCoach } from '@/lib/services/points';
 import HeaderWithFooter from '@/components/header-with_footer';
 
@@ -17,10 +18,11 @@ export async function generateMetadata({
 }: ParamsApp): Promise<Metadata> {
   const dictionary = await getDictionary(lng);
 
-  return {
+  return parseMetadata({
     title: dictionary.pointsPage['metaData.title'],
     description: dictionary.pointsPage['metaData.description'],
-  };
+    lng,
+  });
 }
 
 export default async function Points({ params: { lng } }: ParamsApp) {
@@ -29,17 +31,19 @@ export default async function Points({ params: { lng } }: ParamsApp) {
   if (!session?.user) {
     redirect(`/${lng}${routes.signIn}?${CALLBACK_URL}=/${lng}${routes.points}`);
   }
+
   const dictionary = await getDictionary(lng);
-  const { points, error } = await getPointsByCoach(session.user.coachId);
+  const { points, error } = await getPointsByCoach(session?.user.coachId);
+
   return (
     <HeaderWithFooter
       dictionary={dictionary}
-      title={`${dictionary.pointsPage.title}, ${session.user.name}`}
+      title={`${dictionary.pointsPage.title}, ${session?.user.name}`}
       currentLanguage={lng}>
       <PointList
         dictionary={dictionary}
         data={points}
-        error={error}
+        error={String(error)}
       />
     </HeaderWithFooter>
   );

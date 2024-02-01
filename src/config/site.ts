@@ -1,9 +1,10 @@
+const url = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+
 export const siteConfig = {
   name: 'Elifoot',
-  url: 'https://elifoot.com',
-  ogImage: 'https://ui.shadcn.com/og.jpg',
-  description:
-    'Beautifully designed components built with Radix UI and Tailwind CSS.',
+  url,
+  ogImage: `${url}/og.png`,
+  description: 'Creating funny time for all players.',
   links: {
     twitter: 'https://twitter.com/pereirapy',
     github: 'https://github.com/pereirapy/elifoot',

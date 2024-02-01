@@ -73,7 +73,8 @@
     "badOldPassword": "Your current password is not correct",
     "emptyPassword": "The password is empty",
     "dontMatchPassword": "The password is not the same",
-    "CredentialsSignin": "Credentials invalid."
+    "CredentialsSignin": "Credentials invalid.",
+    "no_coachId": "We cannot find your Coach Number"
   },
   "themes": {
     "label": "Change theme",
@@ -97,7 +98,7 @@
     "page.subtitle": "Put down your email and password to access your account",
 
     "input.connect": "Start the session with your email",
-    "haveAccount": "You already have a account?",
+    "haveAccount": "You already have an account?",
     "noAccount": "You don't have a account?"
   },
   "languages": {

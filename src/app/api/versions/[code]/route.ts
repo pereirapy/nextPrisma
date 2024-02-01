@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import { Params } from '@/types/tgver07';
+import { hasSession } from '@/lib/auth';
 import { messageError } from '@/lib/auth/check-user-can-access';
 import {
   deleteVersionById,
@@ -22,6 +23,8 @@ export async function GET(req: Request, { params }: Params) {
 
 export async function PATCH(req: Request, { params }: Params) {
   try {
+    const session = await hasSession();
+
     const code = params.code;
     const body = await req.json();
     const { version, error } = await updateVersionById(body, code);

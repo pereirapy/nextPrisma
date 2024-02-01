@@ -1,7 +1,7 @@
 'use client';
 
 import { LinkProps } from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { signOut } from 'next-auth/react';
 
 import { Dictionary } from '@/types/app';

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 
+import { hasSession } from '@/lib/auth';
 import { messageError } from '@/lib/auth/check-user-can-access';
 import { createRanking, getRankings } from '@/lib/services/ranking';
 
@@ -15,6 +16,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    const session = await hasSession();
     const body = await req.json();
     const { ranking, error } = await createRanking(body);
     if (error) return messageError(error);

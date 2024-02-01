@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 import { ParamsApp } from '@/types/app';
 import { getDictionary } from '@/lib/i18n';
+import { parseMetadata } from '@/lib/i18n/settings';
 import HeaderWithFooter from '@/components/header-with_footer';
 
 import { CreateUserContainer } from './components/create-user-container';
@@ -11,10 +12,11 @@ export async function generateMetadata({
 }: ParamsApp): Promise<Metadata> {
   const dictionary = await getDictionary(lng);
 
-  return {
-    title: dictionary.signUp['metaData.title'],
-    description: dictionary.signUp['metaData.description'],
-  };
+  return parseMetadata({
+    title: dictionary.pointsPage['metaData.title'],
+    description: dictionary.pointsPage['metaData.description'],
+    lng,
+  });
 }
 
 export default async function SignUpPage({ params: { lng } }: ParamsApp) {

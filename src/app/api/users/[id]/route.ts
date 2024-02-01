@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import { Params } from '@/types/user';
+import { hasSession } from '@/lib/auth';
 import { messageError } from '@/lib/auth/check-user-can-access';
 import { deleteUserById, getUser, updateUserById } from '@/lib/services/users';
 
@@ -18,6 +19,8 @@ export async function GET(req: Request, { params }: Params) {
 
 export async function PATCH(req: Request, { params }: Params) {
   try {
+    const session = await hasSession();
+
     const id = params.id;
     const body = await req.json();
     const { user, error } = await updateUserById(body, id);
@@ -32,6 +35,8 @@ export async function PATCH(req: Request, { params }: Params) {
 
 export async function DELETE(req: Request, { params }: Params) {
   try {
+    const session = await hasSession();
+
     const id = params.id;
     const { user, error } = await deleteUserById(id);
     if (error) return messageError(error);

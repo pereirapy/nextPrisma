@@ -17,18 +17,23 @@ type PointListProps = {
 } & (
   | {
       data: tcoachgpt03[];
-      error?: string | unknown;
+      error?: string;
     }
   | {
       data?: tcoachgpt03[];
-      error: string | unknown;
+      error: string;
     }
 );
 export default function PointList({ dictionary, data, error }: PointListProps) {
   return (
     <div>
       {error ? (
-        <div>{String(error)}</div>
+        <div>
+          {
+            //@ts-ignore
+            dictionary.errors[error]
+          }
+        </div>
       ) : (
         <Table>
           <TableCaption>{dictionary.pointsPage.tableCaption}</TableCaption>

@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth';
 import { ParamsApp } from '@/types/app';
 import { authOptions } from '@/lib/auth';
 import { getDictionary } from '@/lib/i18n';
+import { parseMetadata } from '@/lib/i18n/settings';
 import { getRankings } from '@/lib/services/ranking';
 import HeaderWithFooter from '@/components/header-with_footer';
 
@@ -14,10 +15,11 @@ export async function generateMetadata({
 }: ParamsApp): Promise<Metadata> {
   const dictionary = await getDictionary(lng);
 
-  return {
-    title: dictionary.rankingPage['metaData.title'],
-    description: dictionary.rankingPage['metaData.description'],
-  };
+  return parseMetadata({
+    title: dictionary.pointsPage['metaData.title'],
+    description: dictionary.pointsPage['metaData.description'],
+    lng,
+  });
 }
 
 export default async function Ranking({ params: { lng } }: ParamsApp) {

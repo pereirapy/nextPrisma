@@ -76,7 +76,9 @@
     "badOldPassword": "Senha antiga errada.",
     "emptyPassword": "Senha vazia.",
     "dontMatchPassword": "A senha não corresponde.",
-    "CredentialsSignin": "Credenciais invalidas"
+    "CredentialsSignin": "Credenciais invalidas",
+    "no_coachId": "Não foi possível encontrar seu número de treinador"
+
   },
   "themes": {
     "label": "Mudar tema",

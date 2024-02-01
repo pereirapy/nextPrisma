@@ -80,7 +80,7 @@ export function CreateUserContainer({
         onSubmit={onSubmit}
       />
       <div className="text-center">
-        {dictionary.login.noAccount}
+        {dictionary.login.haveAccount}
         <OurLink href={`/${currentLanguage}${routes.signIn}`}>
           {dictionary.common.signIn}
         </OurLink>
